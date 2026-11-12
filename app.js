@@ -119,6 +119,8 @@
   });
 
   /* ---------- ano no rodapé ---------- */
+  var yearStr = String(new Date().getFullYear());
   var yr = d.getElementById('yr');
-  if (yr) yr.textContent = String(new Date().getFullYear());
+  if (yr) yr.textContent = yearStr;
+  d.querySelectorAll('.yr-copy').forEach(function (el) { el.textContent = yearStr; });
 })();

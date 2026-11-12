@@ -1,6 +1,8 @@
 # Apostila de Tráfego Pago & Landing Pages
 
-Material educacional completo (nível intermediário→avançado) para mentorados em tráfego pago:
+**Autor e mentor:** Guilherme Miranda de Aguiar
+
+Material educacional completo (nível intermediário→avançado) para alunos da mentoria:
 
 - **Google Ads** — Search, Performance Max, Demand Gen, AI Max (2025), lances inteligentes, scripts
 - **Meta Ads** — Gerenciador de Anúncios, Advantage+, Pixel + CAPI, click-to-WhatsApp
@@ -33,6 +35,11 @@ Site publicado no GitHub Pages:
 
 Dica: o site pode ser impresso em PDF pelo botão "Imprimir / salvar em PDF" (tema claro otimizado para papel).
 
-## Créditos
+## Créditos e direitos autorais
 
-Material de mentoria — edição novembro/2025. Construído com vibe coding (z.ai · GLM-5.3) e publicado exatamente com o fluxo ensinado no Módulo 08 da apostila.
+**© 2026 Guilherme Miranda de Aguiar — Todos os direitos reservados.**
+
+Direitos de cópia limitados aos alunos matriculados na mentoria, para estudo pessoal. É proibida a revenda,
+redistribuição, compartilhamento ou publicação deste material, no todo ou em parte, sem autorização expressa do autor.
+
+Construído com vibe coding (z.ai · GLM-5.3) e publicado exatamente com o fluxo ensinado no Módulo 08 da apostila.

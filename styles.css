@@ -1,5 +1,5 @@
 /* ============================================================
-   APOSTILA TRÁFEGO PAGO & LANDING PAGES — Design System 2025
+   APOSTILA TRÁFEGO PAGO & LANDING PAGES — Design System 2026
    Tema: dark premium, glassmorphism, gradientes indigo→violeta→cyan
    ============================================================ */
 
@@ -143,6 +143,14 @@ code,kbd,pre{font-family:var(--mono)}
 .badge::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--acc,var(--violet))}
 .badge.b-g{--acc:var(--google)} .badge.b-m{--acc:var(--meta)} .badge.b-a{--acc:var(--amber)}
 .badge.b-c{--acc:var(--cyan)} .badge.b-e{--acc:var(--emerald)} .badge.b-r{--acc:var(--rose)} .badge.b-p{--acc:var(--pink)}
+.author-byline{display:inline-flex;align-items:center;gap:14px;padding:12px 22px 12px 13px;border-radius:17px;
+  background:rgba(139,92,246,.07);border:1px solid rgba(139,92,246,.28);margin:0 0 30px}
+.author-ava{width:46px;height:46px;border-radius:14px;flex:none;display:grid;place-items:center;
+  font-family:var(--display);font-weight:800;font-size:1rem;letter-spacing:.04em;color:#fff;
+  background:linear-gradient(135deg,#6366f1,#a855f7 55%,#22d3ee);box-shadow:0 10px 26px -10px rgba(139,92,246,.65)}
+.author-byline .ab-t{font-size:.94rem;color:var(--text);line-height:1.4}
+.author-byline .ab-t b{font-family:var(--display);font-weight:700}
+.author-byline .ab-s{font-size:.76rem;color:var(--muted);margin-top:3px}
 .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:30px}
 .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 26px;border-radius:14px;font:600 .95rem var(--font);
   cursor:pointer;border:none;transition:all .2s ease;text-decoration:none}
@@ -390,6 +398,9 @@ footer.foot{padding:44px 0 10px;text-align:center}
   font-size:.95rem;margin-bottom:14px}
 .foot-brand .brand-ico{width:30px;height:30px;border-radius:9px}
 .foot p{font-size:.78rem;color:var(--faint);max-width:640px;margin:0 auto 9px;line-height:1.7}
+.foot p b{color:var(--muted);font-weight:600}
+.foot .foot-sign{margin-top:16px;font-style:italic;color:var(--muted)}
+.foot .foot-sign b{font-style:normal;font-family:var(--display);color:var(--text)}
 
 /* ---------- voltar ao topo ---------- */
 .to-top{position:fixed;right:26px;bottom:26px;z-index:100;width:48px;height:48px;border-radius:15px;cursor:pointer;
@@ -456,6 +467,9 @@ footer.foot{padding:44px 0 10px;text-align:center}
   a{color:#2b6cb0}
   .challenge{background:#f3f4fb;border:1.5px solid #7c5cd6}
   .callout{background:#f7f8fc}
+  .author-byline{background:#f6f8fc;border-color:#c9cede}
+  .author-ava{background:#6d43d8;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .foot .foot-sign{color:#4b5265}
   .objectives{background:#f7f8fc}
   details.acc{background:#fff}
   details.acc .acc-body{display:block!important}

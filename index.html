@@ -1,0 +1,2100 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apostila de Tráfego Pago &amp; Landing Pages — Guia Profissional 2025</title>
+<meta name="description" content="Apostila intermediário→avançado de tráfego pago: Google Ads, Meta Ads (Gerenciador de Anúncios), testes A/B, landing pages e vibe coding com z.ai GLM-5.3 + deploy no GitHub Pages. Baseada nas documentações oficiais de 2025.">
+<meta name="author" content="Material de mentoria">
+<meta property="og:title" content="Apostila de Tráfego Pago &amp; Landing Pages — Guia Profissional 2025">
+<meta property="og:description" content="Google Ads, Meta Ads, testes A/B, landing pages e vibe coding com z.ai + GitHub Pages. Do leilão ao deploy.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236366f1'/%3E%3Cstop offset='.55' stop-color='%23a855f7'/%3E%3Cstop offset='1' stop-color='%2322d3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Cpath d='M18 4 8 18h6l-2 10L22 14h-6z' fill='white'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Sora:wght@600;700;800&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="bg-canvas"></div>
+<div class="bg-grid"></div>
+<div class="progress" id="progress"></div>
+
+<button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-controls="sidebar">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+</button>
+<div class="overlay" id="overlay"></div>
+
+<aside class="sidebar" id="sidebar" aria-label="Sumário da apostila">
+  <div class="brand">
+    <div class="brand-ico">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M13.5 2 5 14h5l-1.5 8L17 10h-5l1.5-8z" fill="#fff"/></svg>
+    </div>
+    <div>
+      <div class="brand-t">Tráfego Pago &amp;<br>Landing Pages</div>
+      <div class="brand-s">Apostila · 2025</div>
+    </div>
+  </div>
+  <nav class="nav">
+    <a class="nav-item" href="#top">Início</a>
+    <a class="nav-item" href="#mapa">Mapa da formação</a>
+    <div class="nav-group">Módulos</div>
+    <a class="nav-item" href="#m1"><span class="ni-num">01</span>Fundamentos &amp; Estratégia</a>
+    <a class="nav-item" href="#m2"><span class="ni-num">02</span>Google Ads Profissional</a>
+    <a class="nav-item" href="#m3"><span class="ni-num">03</span>Meta Ads Profissional</a>
+    <a class="nav-item" href="#m4"><span class="ni-num">04</span>Rastreamento &amp; Dados</a>
+    <a class="nav-item" href="#m5"><span class="ni-num">05</span>Testes A/B</a>
+    <a class="nav-item" href="#m6"><span class="ni-num">06</span>Landing Pages</a>
+    <a class="nav-item" href="#m7"><span class="ni-num">07</span>Vibe Coding z.ai</a>
+    <a class="nav-item" href="#m8"><span class="ni-num">08</span>GitHub &amp; Deploy</a>
+    <a class="nav-item" href="#m9"><span class="ni-num">09</span>Playbooks por Segmento</a>
+    <a class="nav-item" href="#m10"><span class="ni-num">10</span>Carreira &amp; Agências</a>
+    <div class="nav-group">Extras</div>
+    <a class="nav-item" href="#extras"><span class="ni-num">EX</span>Glossário, rotinas e modelos</a>
+  </nav>
+  <div class="side-foot">
+    <p class="side-note">Intermediário→avançado · ~12h · docs oficiais nov/2025</p>
+    <button class="btn-print" onclick="window.print()">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6z"/></svg>
+      Imprimir / salvar em PDF
+    </button>
+  </div>
+</aside>
+
+<main class="main">
+  <div class="content">
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-bg"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+  <div class="hero-inner">
+    <span class="kicker">Apostila profissional · Edição novembro 2025</span>
+    <h1>Tráfego Pago <span class="amp">&amp;</span> <span class="grad-text">Landing Pages</span></h1>
+    <p class="lead">
+      Do leilão do <strong>Google Ads</strong> ao <strong>Gerenciador de Anúncios da Meta</strong>. Da hipótese de
+      <strong>teste A/B</strong> ao site no ar com <strong>vibe coding na z.ai (GLM-5.3)</strong> e deploy automático no
+      <strong>GitHub Pages</strong>. O guia intermediário→avançado para gerar vendas em qualquer estabelecimento
+      comercial — e construir o currículo que as agências procuram.
+    </p>
+    <div class="badges">
+      <span class="badge b-g">Google Ads</span>
+      <span class="badge b-m">Meta Ads</span>
+      <span class="badge b-c">GA4 + Pixel + CAPI</span>
+      <span class="badge b-r">Testes A/B</span>
+      <span class="badge b-c">Landing Pages</span>
+      <span class="badge b-p">Vibe Coding</span>
+      <span class="badge b-e">GitHub Pages</span>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#mapa">Começar a estudar
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <button class="btn btn-ghost" onclick="window.print()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6z"/></svg>
+        Imprimir / salvar em PDF
+      </button>
+    </div>
+    <div class="hero-meta">
+      <span class="chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V2H6.5A2.5 2.5 0 0 0 4 4.5v15z"/></svg><b>10</b> módulos</span>
+      <span class="chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><b>~12h</b> de estudo</span>
+      <span class="chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><b>40+</b> modelos e checklists</span>
+      <span class="chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg>Baseada na <b>documentação oficial 2025</b></span>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="stat-n">3–5×</div><div class="stat-l">faixa saudável de ROAS para e-commerces com margem a partir de 30%</div></div>
+      <div class="stat"><div class="stat-n">2–3%</div><div class="stat-l">taxa de conversão mediana de landing pages (referência de mercado)</div></div>
+      <div class="stat"><div class="stat-n">&lt; 5 min</div><div class="stat-l">janela ideal de resposta a um lead novo para maximizar agendamentos</div></div>
+      <div class="stat"><div class="stat-n">95%</div><div class="stat-l">nível de confiança padrão para declarar vencedor um teste A/B</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMO USAR ============ -->
+<section class="section" id="como-usar" style="--acc:var(--violet)">
+  <span class="sec-kicker">Antes de começar</span>
+  <h2>Como usar esta apostila</h2>
+  <p class="sec-sub">Este material foi escrito para mentorados de tráfego pago que já conhecem o básico das plataformas
+  e querem operar em nível profissional. Ele é genérico de propósito: serve para qualquer aluno da mentoria.</p>
+  <div class="grid g2" style="margin-top:28px">
+    <div class="card">
+      <div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <div class="c-t">Para quem é</div>
+      <p>Alunos e mentorados que já rodaram campanhas (próprias ou de terceiros) e dominam conceitos como CPC, público
+      e orçamento. Se um termo parecer estranho, consulte o glossário no fim — ele existe exatamente para isso.</p>
+    </div>
+    <div class="card">
+      <div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V2H6.5A2.5 2.5 0 0 0 4 4.5v15zM4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg></div>
+      <div class="c-t">Como estudar</div>
+      <p>Na ordem, os módulos constroem uns sobre os outros. Com pressa? Os módulos 2, 3 e 9 podem ser lidos isoladamente.
+      Faça os <b>Desafios do Mentor</b> — eles simulam o que você vai encontrar em cliente real e em entrevistas.</p>
+    </div>
+    <div class="card">
+      <div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+      <div class="c-t">O que você vai construir</div>
+      <p>Ao final você terá: <b>3 landing pages no ar</b> (criadas com IA e hospedadas de graça), um plano de mídia
+      completo por segmento, um case documentado e um currículo orientado a resultados. Ou seja: um portfólio.</p>
+    </div>
+    <div class="card">
+      <div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+      <div class="c-t">A palavra do Mentor</div>
+      <p>Aqui não existe "professor": quem conduz seu aprendizado é o seu <b>Mentor</b>, e quem executa é você.
+      As caixas <b>"Dica do Mentor"</b> trazem os atalhos que só a prática ensina — trate-as como conselho de quem
+      já errou tudo isso antes de você.</p>
+    </div>
+  </div>
+  <div class="callout mentor">
+    <div class="co-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.6.5 1 1.2 1 2v.5h6v-.5c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg></div>
+    <div class="co-body">
+      <div class="co-title">Dica do Mentor</div>
+      <p>Não pule os módulos 1 e 4. O erro nº 1 de quem começa a operar sozinho é anunciar sem entender a matemática
+      do negócio e sem rastreamento — resultado: queima verba e não sabe por quê. Técnica sem estratégia é dinheiro no lixo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MAPA ============ -->
+<section class="section" id="mapa" style="--acc:var(--violet)">
+  <span class="sec-kicker">Sumário</span>
+  <h2>Mapa da formação</h2>
+  <p class="sec-sub">Dez módulos que cobrem o ciclo completo: estratégia → anúncio → dados → página → deploy → vendas → carreira.</p>
+  <div class="mcards">
+    <a class="mcard" href="#m1" style="--acc:#8b5cf6"><div class="mc-num">MÓDULO 01</div><div class="mc-t">Fundamentos &amp; Estratégia</div><div class="mc-d">A matemática do leilão, Índice de Qualidade, unit economics e arquitetura de conta profissional.</div><div class="mc-meta"><span>75 min</span><span>6 capítulos</span></div></a>
+    <a class="mcard" href="#m2" style="--acc:#4285f4"><div class="mc-num">MÓDULO 02</div><div class="mc-t">Google Ads Profissional</div><div class="mc-d">Search, Performance Max, Demand Gen, lances inteligentes, recursos, scripts e a novidade AI Max.</div><div class="mc-meta"><span>120 min</span><span>9 capítulos</span></div></a>
+    <a class="mcard" href="#m3" style="--acc:#0866ff"><div class="mc-num">MÓDULO 03</div><div class="mc-t">Meta Ads Profissional</div><div class="mc-d">Gerenciador de Anúncios, Advantage+, orçamentos CBO, Pixel + CAPI, criativos e click-to-WhatsApp.</div><div class="mc-meta"><span>110 min</span><span>10 capítulos</span></div></a>
+    <a class="mcard" href="#m4" style="--acc:#34d399"><div class="mc-num">MÓDULO 04</div><div class="mc-t">Rastreamento &amp; Dados</div><div class="mc-d">GA4, ações de conversão, conversões otimizadas, UTMs com ValueTrack e dashboard para cliente.</div><div class="mc-meta"><span>70 min</span><span>6 capítulos</span></div></a>
+    <a class="mcard" href="#m5" style="--acc:#fb7185"><div class="mc-num">MÓDULO 05</div><div class="mc-t">Testes A/B &amp; Otimização</div><div class="mc-d">Metodologia científica, significância estatística na prática, experimentos nativos e backlog de hipóteses.</div><div class="mc-meta"><span>65 min</span><span>7 capítulos</span></div></a>
+    <a class="mcard" href="#m6" style="--acc:#22d3ee"><div class="mc-num">MÓDULO 06</div><div class="mc-t">Landing Pages de Conversão</div><div class="mc-d">Anatomia da página, copywriting (AIDA/PAS), formulários, velocidade e modelos por nicho.</div><div class="mc-meta"><span>85 min</span><span>10 capítulos</span></div></a>
+    <a class="mcard" href="#m7" style="--acc:#a78bfa"><div class="mc-num">MÓDULO 07</div><div class="mc-t">Vibe Coding com z.ai</div><div class="mc-d">Landing pages com IA usando GLM-5.3: o super-prompt, o fluxo de iteração e a biblioteca pronta por nicho.</div><div class="mc-meta"><span>70 min</span><span>9 capítulos</span></div></a>
+    <a class="mcard" href="#m8" style="--acc:#3fb950"><div class="mc-num">MÓDULO 08</div><div class="mc-t">GitHub &amp; Deploy Grátis</div><div class="mc-d">Token fine-grained passo a passo, push pelo agente de IA, GitHub Pages e higiene de segurança.</div><div class="mc-meta"><span>80 min</span><span>10 capítulos</span></div></a>
+    <a class="mcard" href="#m9" style="--acc:#fbbf24"><div class="mc-num">MÓDULO 09</div><div class="mc-t">Playbooks por Segmento</div><div class="mc-d">Restaurantes, clínicas, e-commerce, imobiliárias, B2B e infoprodutos: estrutura, verba e KPI de cada um.</div><div class="mc-meta"><span>90 min</span><span>8 capítulos</span></div></a>
+    <a class="mcard" href="#m10" style="--acc:#f472b6"><div class="mc-num">MÓDULO 10</div><div class="mc-t">Carreira &amp; Agências</div><div class="mc-d">Portfólio em 7 dias, estrutura de case, currículo com métricas, certificações e simulado de entrevista.</div><div class="mc-meta"><span>75 min</span><span>9 capítulos</span></div></a>
+    <a class="mcard" href="#extras" style="--acc:#94a3b8"><div class="mc-num">EXTRA</div><div class="mc-t">Glossário, Rotinas &amp; Modelos</div><div class="mc-d">Glossário com busca, rotina diária/semanal/mensal do gestor e modelos prontos: naming, plano de mídia, log de testes.</div><div class="mc-meta"><span>Consulta</span><span>4 blocos</span></div></a>
+  </div>
+</section>
+
+<!-- ============ MÓDULO 1 ============ -->
+<section class="module" id="m1" style="--acc:#8b5cf6">
+  <div class="mod-head">
+    <div class="mod-ghost">01</div>
+    <span class="mod-kicker">Módulo 01 · Bases profissionais</span>
+    <h2>Fundamentos &amp; Estratégia do Leilão</h2>
+    <div class="mod-meta">
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>75 min</span>
+      <span>6 capítulos</span><span>Nível: consolidar as bases</span>
+    </div>
+    <div class="objectives">
+      <h4>Ao final deste módulo, você será capaz de:</h4>
+      <ul>
+        <li>Explicar como o leilão do Google calcula posição e CPC real — e por que quem paga mais nem sempre vence</li>
+        <li>Auditar e melhorar o Índice de Qualidade com o diagnóstico dos 3 componentes</li>
+        <li>Calcular o ponto de equilíbrio (break-even), o CPA máximo e o valor de um lead antes de gastar 1 real</li>
+        <li>Estruturar contas com convenção de nomes profissional e arquitetura enxuta</li>
+        <li>Calibrar expectativas com benchmarks realistas por setor</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 id="m1-1"><span class="h3-num">1.1</span>Como o leilão realmente funciona</h3>
+  <p>Toda vez que alguém pesquisa no Google, acontece um leilão em milissegundos. O que decide a posição do seu anúncio
+  <strong>não é só o seu lance</strong>, e sim o <strong>Ad Rank</strong> (classificação do anúncio), que combina lance,
+  qualidade, contexto da pesquisa (dispositivo, local, hora, intenção), os efeitos dos recursos de anúncio e os limiares
+  de classificação exigidos para exibir o anúncio.</p>
+  <div class="formula">
+    <b>Ad Rank</b> = Lance × Índice de Qualidade <b>+</b> contexto da pesquisa <b>+</b> efeitos dos recursos <b>+</b> limiares
+    <small>Simplificação didática da fórmula oficial do Google Ads — suficiente para todas as decisões operacionais.</small>
+  </div>
+  <p>O detalhe que muda sua vida financeira: você não paga o seu lance. Você paga <strong>apenas o necessário para
+  superar o Ad Rank do concorrente imediatamente abaixo de você</strong>:</p>
+  <div class="formula">
+    <b>CPC pago</b> = (Ad Rank do concorrente abaixo ÷ seu Índice de Qualidade) + R$ 0,01
+  </div>
+  <div class="callout example">
+    <div class="co-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M8 3v5l-5.2 9.5A2 2 0 0 0 4.6 20h14.8a2 2 0 0 0 1.8-2.5L16 8V3M7 14h10"/></svg></div>
+    <div class="co-body">
+      <div class="co-title">Exemplo prático — números reais do leilão</div>
+      <p><strong>Você:</strong> lance de R$ 4,00 e Índice de Qualidade 7 → Ad Rank = <b>28</b>.<br>
+      <strong>Concorrente:</strong> lance de R$ 6,00 e Índice de Qualidade 4 → Ad Rank = <b>24</b>.</p>
+      <p>Você aparece <b>acima</b> dele pagando apenas (24 ÷ 7) + 0,01 = <b>R$ 3,44</b> — menos que o próprio lance.
+      Quem tem qualidade superior compra cliques mais baratos que quem só aumenta lance. É por isso que agências
+      lucrativas otimizam qualidade antes de mexer em orçamento.</p>
+    </div>
+  </div>
+
+  <h3 id="m1-2"><span class="h3-num">1.2</span>Índice de Qualidade desmontado</h3>
+  <p>O Índice de Qualidade (1 a 10) é o diagnóstico do Google sobre a saúde do seu anúncio em cada palavra-chave.
+  Ative a coluna personalizada nos relatórios de palavras-chave e audite sempre os <strong>3 componentes</strong>:</p>
+  <div class="tbl"><div class="tbl-in"><table>
+    <thead><tr><th>Componente</th><th>Sintoma típico</th><th>Ação corretiva</th></tr></thead>
+    <tbody>
+      <tr><td><b>CTR esperado</b></td><td>Anúncio não gera cliques nem com boa posição</td><td>Reescreva títulos com números, oferta e CTA; use <b>inserção dinâmica de palavra-chave</b> com parcimônia; teste ângulos diferentes de oferta</td></tr>
+      <tr><td><b>Relevância do anúncio</b></td><td>A palavra não aparece nem no anúncio nem na LP</td><td>Agrupe palavras por <b>intenção comum</b> (tema) e escreva o anúncio inteiro sobre aquele tema — congruência palavra → anúncio → página</td></tr>
+      <tr><td><b>Experiência na página de destino</b></td><td>Rejeição alta, LP lenta ou promessa diferente do anúncio</td><td>LP dedicada ao tema, rápida (&lt; 3s no mobile), mobile-first, com a oferta do anúncio visível no primeiro scroll</td></tr>
+    </tbody>
+  </table></div></div>
+  <div class="callout mentor">
+    <div class="co-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.6.5 1 1.2 1 2v.5h6v-.5c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg></div>
+    <div class="co-body">
+      <div class="co-title">Dica do Mentor</div>
+      <p>Índice de Qualidade 7+ é o alvo. Mas cuidado com a armadilha: IQ alto em palavra que <b>não converte</b> é
+      desperdício elegante. Otimize primeiro as palavras com <b>volume + conversões</b>; ignore IQ de termos irrelevantes
+      — o certo é negativá-los, não acariciá-los.</p>
+    </div>
+  </div>
+
+  <h3 id="m1-3"><span class="h3-num">1.3</span>A matemática do negócio (unit economics)</h3>
+  <p>Antes de qualquer campanha, você precisa saber três números do cliente: <strong>ticket médio</strong>,
+  <strong>margem de contribuição</strong> e <strong>recorrência/LTV</strong>. Com eles, o resto é aritmética:</p>
+  <div class="formula">
+    <b>ROAS de equilíbrio</b> = 1 ÷ margem de contribuição<br>
+    <b>CPA máximo</b> = margem de contribuição por venda<br>
+    <b>Valor de um lead</b> = valor da venda × taxa de fechamento × margem
+  </div>
+  <div class="callout example">
+    <div class="co-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M8 3v5l-5.2 9.5A2 2 0 0 0 4.6 20h14.8a2 2 0 0 0 1.8-2.5L16 8V3M7 14h10"/></svg></div>
+    <div class="co-body">
+      <div class="co-title">Exemplo prático 1 — e-commerce</div>
+      <p>Loja de suplementos: ticket médio R$ 180, margem de contribuição 40%.<br>
+      ROAS de equilíbrio = 1 ÷ 0,40 = <b>2,5</b> → abaixo disso, prejuízo. Para crescer com segurança, a meta deve ser
+      <b>ROAS 3,5–4,5</b>. CPA máximo = R$ 180 × 0,40 = <b>R$ 72</b> por pedido (sem considerar recompra).</p>
+    </div>
+  </div>
+  <div class="callout example">
+    <div class="co-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M8 3v5l-5.2 9.5A2 2 0 0 0 4.6 20h14.8a2 2 0 0 0 1.8-2.5L16 8V3M7 14h10"/></svg></div>
+    <div class="co-body">
+      <div class="co-title">Exemplo prático 2 — clínica (serviço de ticket alto)</div>
+      <p>Implante dentário: ticket R$ 2.800, margem 40% (R$ 1.120). Do agendamento ao tratamento, fecham 30%.<br>
+      Valor de cada agendamento = 2.800 × 0,30 × 0,40 = <b>R$ 336</b>. Se a landing page converte 40% dos leads em
+      agendamento, seu <b>CPL máximo = R$ 134</b>. Com LTV (recompra, limpeza, indicação) essa teto sobe — mas comece
+      conservador e reavalie aos 90 dias.</p>
+    </div>
+  </div>
+  <div class="callout warn">
+    <div class="co-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0zM12 9v4M12 17h.01"/></svg></div>
+    <div class="co-body">
+      <div class="co-title">Atenção</div>
+      <p>Peça esses números ao cliente <b>na primeira reunião</b>. Cliente que não sabe a margem é sinal de dois problemas:
+      você vai operar sem meta, e ele vai julgar o resultado por "sensação". Defina a meta numérica no contrato (ex.: CPL
+      ≤ R$ 150 ou ROAS ≥ 3,5) e salve no e-mail.</p>
+    </div>
+  </div>
+
+  <h3 id="m1-4"><span class="h3-num">1.4</span>Funil e intenção: a mensagem certa na hora certa</h3>
+  <p>Tráfego pago de resultado respeita a intenção do usuário. Anunciar "compre agora" para quem nunca ouviu falar de você
+  queima verba; anunciar apenas "conheça a marca" para quem está com cartão na mão deixa dinheiro na mesa.</p>
+  <div class="tbl"><div class="tbl-in"><table>
+    <thead><tr><th>Etapa</th><th>Intenção</th><th>Canais típicos</th><th>Mensagem</th><th>Métrica-guia</th></tr></thead>
+    <tbody>
+      <tr><td><b>TOFU</b> (topo)</td><td>Não conhece o problema/solução</td><td>Meta vídeo/alcance, YouTube, Demand Gen</td><td>Educativa, autoridade, "como resolver X"</td><td>CPM, custo por visualização, retenção 3s</td></tr>
+      <tr><td><b>MOFU</b> (meio)</td><td>Pesquisa soluções, compara</td><td>Search informativo, remarketing, carrossel</td><td>Diferenciais, prova social, comparativos</td><td>CTR, custo por lead, engajamento</td></tr>
+      <tr><td><b>BOFU</b> (fundo)</td><td>Pronto para comprar/agendar</td><td>Search transacional, Shopping/PMax, remarketing de carrinho</td><td>Oferta, urgência, CTA direto</td><td>CPA, ROAS, taxa de conversão</td></tr>
+    </tbody>
+  </table></div></div>
+  <p>Regra de bolso para contas novas: <strong>70% da verba em fundo de funil</strong> (prova de conceito rápida),
+  20% em meio (crescimento) e 10% em topo (futuro). Contas maduras invertem gradualmente essa proporção.</p>
+
+  <h3 id="m1-5"><span class="h3-num">1.5</span>Arquitetura de conta e convenção de nomes</h3>
+  <div class="chain">
+    <div class="node"><b>Conta MCC</b><span>acesso centralizado de agência</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><b>Conta</b><span>1 conta por cliente</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><b>Campanha</b><span>objetivo + orçamento + lances</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><b>Grupo</b><span>tema/intenção</span></div>
+    <div class="arrow">→</div>
+    <div class="node hot"><b>Anúncio</b><span>criativo + LP</span></div>
+  </div>
+  <p>Contas profissionais são <strong>enxutas e legíveis</strong>. A era de 200 grupos com 1 palavra cada (os antigos
+  SKAGs) acabou: agrupe por <strong>tema de intenção</strong> e deixe os lances inteligentes trabalharem com volume.
+  Uma conta pequena bem feita tem de 3 a 8 campanhas.</p>
+  <div class="code">
+    <div class="code-head"><span class="code-file">convencao-de-nomes.txt</span><button class="copy">Copiar</button></div>
+    <pre><code><span class="cm"># Padrão usado por agências — mantenha idêntico em todas as plataformas:</span>
+[CLIENTE]_[CANAL]_[OBJETIVO]_[PÚBLICO ou PRODUTO]_[MES-ANO]
+
+<span class="cm"># Exemplos reais:</span>
+PIZA-BRASA_GGL-SEARCH_BAIRRO-CENTRO_NOV-25
+CLINICA-SORRIR_META-VND_ASC-CATALOGO_NOV-25
+IMOB-PRIMA_GGL-PMAX_TORRE-A_NOV-25
+MODA-VERAO_META_VND_REMKT-CARRINHO_NOV-25
+
+<span class="cm"># Por que importa: qualquer pessoa da equipe entende a conta em
+# 30 segundos, e os relatórios agregam por padrão de nome, não por memória.</span></code></pre>
+  </div>
+
+  <h3 id="m1-6"><span class="h3-num">1.6</span>Benchmarks para calibrar expectativas</h3>
+  <p>Números orientativos para o mercado brasileiro (2024/2025), cruzando relatórios públicos de referência
+  (LocaliQ/WordStream, EUA) com a prática de contas nacionais. Use como <strong>régua inicial</strong>, nunca como meta
+  definitiva — o histórico da própria conta manda mais alto:</p>
+  <div class="tbl"><div class="tbl-in"><table>
+    <thead><tr><th>Setor</th><th>CTR Search típico</th><th>CPC típico BR</th><th>Observação do Mentor</th></tr></thead>
+    <tbody>
+      <tr><td><b>Advocacia</b></td><td>5–8%</td><td>R$ 6–15</td><td>Clique caro, lead vale muito; foco absoluto em BOFU</td></tr>
+      <tr><td><b>Saúde / clínicas</b></td><td>4–7%</td><td>R$ 3–10</td><td>Varia forte por especialidade; cuidado com políticas de anúncio</td></tr>
+      <tr><td><b>Imobiliário</b></td><td>3–6%</td><td>R$ 3–8</td><td>Lead qualificado importa mais que lead barato</td></tr>
+      <tr><td><b>Educação</b></td><td>4–6%</td><td>R$ 3–8</td><td>Forte sazonalidade (janeiro e julho)</td></tr>
+      <tr><td><b>Moda / e-commerce</b></td><td>2–5%</td><td>R$ 1–4</td><td>Volume alto, margem apertada, ROAS é o rei</td></tr>
+      <tr><td><b>Restaurantes (local)</b></td><td>5–9%</td><td>R$ 1,50–4</td><td>Intenção altíssima; Perfil da Empresa + WhatsApp fazem metade do trabalho</td></tr>
+    </tbody>
+  </table></div></div>
+  <p>Para landing pages, a referência clássica do mercado aponta <strong>mediana de 2–3%</strong> de conversão, com os
+  melhores 10% do mercado acima de 11%. Se sua LP converte 1% e o clique custa R$ 4, dobrar a conversão da página vale
+  mais do que qualquer otimização de lance — essa é a tese dos módulos 6 e 7.</p>
+
+  <div class="challenge">
+    <h4><span class="ch-tag">Prática</span>Desafio do Mentor — Módulo 01</h4>
+    <p class="ch-sub">Resolva no papel antes de olhar qualquer plataforma. É assim que se aprende a matemática.</p>
+    <ol>
+      <li>Cliente e-commerce: ticket R$ 180, margem 40%. Calcule o <b>ROAS de equilíbrio</b>, o <b>CPA máximo</b> e defina uma meta de ROAS de crescimento. Justifique a meta.</li>
+      <li>Num leilão, seu anúncio tem IQ 5 e lance R$ 6,00; o concorrente tem IQ 8 e lance R$ 4,50. Quem aparece acima? Quanto o vencedor pagaria se fosse você? E se fosse ele?</li>
+      <li>Escreva a convenção de nomes para: barbearia com Search local + remarketing da Meta, iniciando em novembro de 2025.</li>
+      <li>Escolha 2 setores em que um CPL de R$ 80 seria barato e explique por quê (dica: ticket, margem e recorrência).</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ MÓDULO 2 ============ -->
+<section class="module" id="m2" style="--acc:#4285f4">
+  <div class="mod-head">
+    <div class="mod-ghost">02</div>
+    <span class="mod-kicker">Módulo 02 · Google Ads</span>
+    <h2>Google Ads Profissional</h2>
+    <div class="mod-meta">
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>120 min</span>
+      <span>9 capítulos</span><span>Fonte: Central de Ajuda do Google Ads (2025)</span>
+    </div>
+    <div class="objectives">
+      <h4>Ao final deste módulo, você será capaz de:</h4>
+      <ul>
+        <li>Escolher o tipo de campanha certo para cada objetivo e orçamento</li>
+        <li>Montar campanhas de Search com correspondências, negativas e RSAs em nível profissional</li>
+        <li>Operar Performance Max com grupos de recursos e sinais — sabendo quando NÃO usar</li>
+        <li>Definir a estratégia de lances com a árvore de decisão correta</li>
+        <li>Automatizar a operação com regras e scripts básicos</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 id="m2-1"><span class="h3-num">2.1</span>O mapa de campanhas de 2025</h3>
+  <p>O Google Ads consolidou seus formatos em torno da IA e do objetivo comercial. Este é o mapa que um gestor
+  profissional mantém na cabeça:</p>
+  <div class="tbl"><div class="tbl-in"><table>
+    <thead><tr><th>Tipo</th><th>Onde aparece</th><th>Quando usar</th><th>KPI primário</th></tr></thead>
+    <tbody>
+      <tr><td><b>Search</b></td><td>Resultados de pesquisa do Google</td><td>Capturar demanda existente — sempre o melhor começo em B2B, serviços e locais</td><td>CPA / ROAS</td></tr>
+      <tr><td><b>Performance Max (PMax)</b></td><td>Search, YouTube, Display, Gmail, Discover e Maps (inventário unificado)</td><td>Escala e e-commerce com catálogo; contas com histórico de conversões</td><td>ROAS / valor de conversão</td></tr>
+      <tr><td><b>Demand Gen</b></td><td>YouTube (incluindo Shorts), Discover e Gmail</td><td>Criar demanda, públicos semelhantes, funil de topo/meio visual</td><td>Custo por lead / CPM</td></tr>
+      <tr><td><b>Vídeo / YouTube</b></td><td>In-stream, Shorts, in-feed</td><td>Autoridade e alcance segmentado; VSLs de infoproduto</td><td>Custo por visualização / CPV</td></tr>
+      <tr><td><b>Shopping</b></td><td>Aba Shopping e parceiros</td><td>Vitrine de produto — hoje operado dentro do PMax com feed do Merchant Center Next</td><td>ROAS</td></tr>
+      <tr><td><b>Display</b></td><td>Milhões de sites parceiros</td><td>Basicamente remarketing e alcance barato; evitar para conversão fria</td><td>CPM / CPA (remkt)</td></tr>
+    </tbody>
+  </table></div></div>
+
+  <h3 id="m2-2"><span class="h3-num">2.2</span>Search avançado: palavras, negativas e RSAs</h3>
+  <h4>Correspondências de palavra-chave</h4>
+  <div class="tbl"><div class="tbl-in"><table>
+    <thead><tr><th>Tipo</th><th>Sintaxe</th><th>Entra quando</th><th>Uso profissional</th></tr></thead>
+    <tbody>
+      <tr><td><b>Exata</b></td><td class="mono">[implante dentário]</td><td>Significado igual ou muito próximo</td><td>Suas keywords "herói" com histórico — controle máximo</td></tr>
+      <tr><td><b>Frase</b></td><td class="mono">"implante dentário preço"</td><td>Significado contido na frase, com termos antes/depois</td><td>Cobertura controlada de variações próximas</td></tr>
+      <tr><td><b>Ampla</b></td><td class="mono">implante dentário</td><td>Qualquer busca relacionada ao tema</td><td>Descoberta de termos novos — <b>com lances inteligentes + relatório de termos semanal</b></td></tr>
+    </tbody>
+  </table></div></div>
+  <p>A correspondência ampla deixou de ser vilã na era dos lances inteligentes (e virou o motor do AI Max, ver 2.3),
+  mas ela <strong>só funciona com disciplina</strong>: relatório de termos de pesquisa toda semana, negativando o lixo
+  e promovendo as joias para grupos próprios.</p>
+  <h4>Palavras-chave negativas: o controle de desperdício</h4>
+  <p>Crie <strong>listas de negativas compartilhadas</strong> (Biblioteca compartilhada → Listas de palavras-chave
+  negativas) e vincule a todas as campanhas de busca. Uma lista nacional mínima:</p>
+  <div class="code">
+    <div class="code-head"><span class="code-file">negativas-padrao.txt</span><button class="copy">Copiar</button></div>
+    <pre><code><span class="cm"># Blocos que quase nunca geram venda — adapte por nicho:</span>
+grátis, gratuito, de graça, cupom, promoção (se você não faz)
+curso, aula, tutorial, como fazer, passo a passo, pdf
+vaga, emprego, salário, concursos
+significado, o que é, wikipedia
+2 mão, usado, brecho (para produtos novos)
+
+<span class="cm"># Para serviços: quem pesquisa preço demais está comparando?
+# Negativar "de graça" e variantes sempre. "Preço" NÃO negative —
+# é intenção de compra. Convide para o orçamento.</span></code></pre>
+  </div>
+  <h4>RSA — Responsive Search Ads</h4>
+  <p>Formato padrão do Search: você fornece até <strong>15 títulos (30 caracteres)</strong> e <strong>4 descrições
+  (90 caracteres)</strong>, e o Google testa combinações. Regras de ouro:</p>
+  <ul class="list">
+    <li>Preencha <b>todos os campos</b> — mais combinações = mais aprendizado do Google;</li>
+    <li>Cada título deve fazer sentido <b>sozinho e em qualquer posição</b> (evite frases dependentes do anterior);</li>
+    <li>Varie os ângulos: <b>oferta</b> ("30% Off na Primeira Pizza"), <b>prova</b> ("+12 mil sorrisos"), <b>urgência</b> ("Agende Hoje"), <b>local</b> ("Entrega no Centro");</li>
+    <li>Fixe títulos (pinning) <b>apenas</b> para compliance, promoção regulada ou telefone — pinning demais derruba o Ad Strength;</li>
+    <li>Use <b>3 a 5 RSAs por grupo</b> com ângulos diferentes e deixe o sistema otimizar.</li>
+  </ul>
+
+  <h3 id="m2-3"><span class="h3-num">2.3</span>AI Max para Search <span class="pill p-new">Novidade 2025</span></h3>
+  <div class="callout new">
+    <div class="co-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></div>
+    <div class="co-body">
+      <div class="co-title">Atualização 2025</div>
+      <p>O <b>AI Max para campanhas de Search</b> (rolando globalmente em 2025) é um upgrade opcional que adiciona
+      correspondência ampla controlada por IA, <b>recursos criados automaticamente</b> a partir do site e a
+      <b>expansão de URL final</b> (o Google pode direcionar o clique para a página mais relevante do domínio).</p>
+    </div>
+  </div>
+  <p>Quando ligar: contas com <strong>histórico de conversões</strong> e site bem estruturado. Quando evitar: campanhas
+  de marca, páginas de destino críticas (use <strong>exclusões de URL</strong> para impedir que a expansão mande tráfego
+  para páginas erradas) e contas sem dados. Depois de ativar, monitore o relatório de termos com frequência redobrada
+  nas duas primeiras semanas.</p>
+
+  <h3 id="m2-4"><span class="h3-num">2.4</span>Performance Max sem medo</h3>
+  <p>O PMax usa <strong>grupos de recursos</strong> (asset groups) por tema, e o Google distribui orçamento em todos os
+  inventários. Estrutura profissional:</p>
+  <ul class="list">
+    <li><b>1 asset group por tema/linha de produto</b> — ex.: "tênis de corrida" separado de "tênis casual";</li>
+    <li>Recursos: 5 títulos (30), 5 títulos longos (90), 5 descrições (90), nome da empresa (25), imagens quadrada 1200×1200 + paisagem 1200×628 + retrato + logo, e vídeo (envie o seu — não deixe o Google gerar sozinho);</li>
+    <li><b>Sinais de público</b> (audience signals) orientam, não limitam: adicione públicos de remarketing, Customer Match e dados de primeira parte;</li>
+    <li>E-commerce: vincule o <b>Merchant Center Next</b> com feed impecável (título, preço, imagem, estoque) — o feed é metade do desempenho;</li>
+    <li>Pontos cegos: o relatório de termos é limitado. Monitore <b>insights da campanha</b> e as explicações automáticas.</li>
+  </ul>
+  <div class="callout mentor">
+    <div class="co-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.6.5 1 1.2 1 2v.5h6v-.5c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg></div>
+    <div class="co-body">
+      <div class="co-title">Dica do Mentor</div>
+      <p>Combo vencedor para a maioria das contas de serviço: <b>Search para capturar demanda + PMax para descobrir
+      demanda nova</b>, com o Search consolidado primeiro. E nunca jogue a mesma verba em 5 tipos de campanha de uma vez
+      — você divide o aprendizado e nada amadurece.</p>
+    </div>
+  </div>
+
+  <h3 id="m2-5"><span class="h3-num">2.5</span>Lances inteligentes: a árvore de decisão</h3>
+  <div class="tbl"><div class="tbl-in"><table>
+    <thead><tr><th>Situação da conta</th><th>Estratégia recomendada</th><th>Observação</th></tr></thead>
+    <tbody>
+      <tr><td>Menos de ~30 conversões/mês</td><td><b>Maximizar conversões</b> (sem meta)</td><td>Acumule dados; somei conversões de chamada e formulário</td></tr>
+      <tr><td>30+ conversões/mês e CPA alvo definido</td><td><b>CPA desejado (tCPA)</b></td><td>Comece com o CPA médio dos últimos 30 dias; ajuste ±15% por vez</td></tr>
+      <tr><td>E-commerce com valores variados</td><td><b>Valor de conversão desejado (tROAS)</td></b></td><td>Exige valores de conversão confiáveis no rastreamento</td></tr>
+      <tr><td>Lead de qualidade variável (clínica, imóvel)</td><td>Conversões <b>offline/otimizadas</b> + lances por valor</td><td>Importe quais leads viraram venda (Módulo 4)</td></tr>
+      <tr><td>Campanha de marca</td><td><b>CPM maximizado</b> ou clique manual</td><td>Proteja a marca com lance alto em quem já te busca</td></tr>
+    </tbody>
+  </table></div></div>
+  <div class="callout warn">
+    <div class="co-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0zM12 9v4M12 17h.01"/></svg></div>
+    <div class="co-body">
+      <div class="co-title">Atenção — a regra de estabilização</div>
+      <p>Após criar ou alterar uma estratégia de lance, <b>não mexa por 2 semanas ou ~50 conversões</b>. Cada mudança
+      reinicia o aprendizado. Anote a data da mudança no nome da campanha (ex.: <span class="tag">_TCPA66-12NOV</span>)
+      para saber de onde medir.</p>
+    </div>
+  </div>
+
+  <h3 id="m2-6"><span class="h3-num">2.6</span>Recursos de anúncio (extensões) que todo profissional usa</h3>
+  <div class="tbl"><div class="tbl-in"><table>
+    <thead><tr><th>Recurso</th><th>Limite</th><th>Uso prático</th></tr></thead>
+    <tbody>
+      <tr><td><b>Sitelinks</b></td><td>25 caracteres (texto) + 35×2 (descrições)</td><td>Atalhos: "Menu", "Unidades", "Orçamento", "Avaliações"</td></tr>
+      <tr><td><b>Frases de destaque (callouts)</b></td><td>25 caracteres</td><td>"Entrega em 30 min", "Parcele em 6x", "+10 anos de mercado"</td></tr>
+      <tr><td><b>Snippets estruturados</b></td><td>25 por valor</td><td>Cabeçalho "Serviços" + implante, limpeza, clareamento…</td></tr>
+      <tr><td><b>Chamada</b></td><td>telefone + horário</td><td>Indispensável para negócios locais; conte ligações com duração mínima como conversão</td></tr>
+      <tr><td><b>Local</b></td><td>via Perfil da Empresa vinculado</td><td>Endereço, rota e avaliações no anúncio — grátis e poderoso</td></tr>
+      <tr><td><b>Formulário de lead</b></td><td>200 (descrição) + perguntas</td><td>Captura sem site; configure integração/CRM para não perder leads</td></tr>
+      <tr><td><b>Preço</b></td><td>tabela de serviços</td><td>Pré-qualifica: quem clica já sabe o valor aproximado</td></tr>
+      <tr><td><b>Imagem e promoção</b></td><td>1200×1200 / promoções datadas</td><td>Sazonais: Black Friday, dia das mães, aniversário da loja</td></tr>
+    </tbody>
+  </table></div></div>
+  <p>Preencha <strong>todos os recursos possíveis</strong>: eles aumentam o Ad Rank (o "efeito dos recursos" da fórmula
+  do Módulo 1) sem custo adicional por clique.</p>
+
+  <h3 id="m2-7"><span class="h3-num">2.7</span>YouTube e Demand Gen: demanda visual</h3>
+  <ul class="list">
+    <li><b>Hook nos 3 primeiros segundos</b> — no vídeo, se o primeiro momento não prender, nada mais importa;</li>
+    <li>Formatos: 15–30s in-stream pulável (pula aos 5s — ponha a oferta antes), bumper de 6s para reforço de marca, e <b>verticais 9:16 para Shorts</b>;</li>
+    <li><b>Demand Gen</b>: imagens 1200×628 e 1200×1200 + vídeo; use para públicos semelhantes e remarketing visual com criativos de valor (guia, comparativo, demonstração);</li>
+    <li>Comece com verba pequena (10–20% da conta), otimize para visualizações/engajamento e escale o que gerar conversão assistida.</li>
+  </ul>
+
+  <h3 id="m2-8"><span class="h3-num">2.8</span>Automação profissional: regras e scripts</h3>
+  <h4>Regras automáticas (sem código)</h4>
+  <ul class="list">
+    <li><b>Coleteira de desperdício:</b> pausar palavra com gasto &gt; R$ X e 0 conversões nos últimos 30 dias;</li>
+    <li><b>Alerta de orçamento:</b> e-mail quando a campanha atingir 90% do orçamento diário antes das 18h;</li>
+    <li><b>Protetor de CPA:</b> pausar (ou avisar) quando CPA dos últimos 7 dias &gt; limite — nunca deixe pausa automática sem revisão humana semanal.</li>
+  </ul>
+  <h4>Script essencial: caça a palavras sem conversão</h4>
+  <div class="code">
+    <div class="code-head"><span class="code-file">scripts-google-ads.js — rotular palavras caras sem conversão</span><button class="copy">Copiar</button></div>
+    <pre><code><span class="cm">// Conta &gt; Scripts &gt; + &gt; cole e autorize. Crie antes o rótulo "Pausar-Candidato".</span>
+function main() {
+  var LIMITE_GASTO = 100; <span class="cm">// R$ gastos sem converter</span>
+  var kwIter = AdsApp.keywords()
+    .withCondition(&amp;quot;Cost &amp;gt; &amp;quot; + LIMITE_GASTO)
+    .withCondition(&amp;quot;Conversions = 0&amp;quot;)
+    .forDateRange(&amp;quot;LAST_30_DAYS&amp;quot;)
+    .get();
+  while (kwIter.hasNext()) {
+    var kw = kwIter.next();
+    kw.applyLabel(&amp;quot;Pausar-Candidato&amp;quot;);
+    Logger.log(&amp;quot;Etiquetada: &amp;quot; + kw.getText() +
+      &amp;quot; | gasto R$ &amp;quot; + kw.getStats().getCost());
+  }
+}</code></pre>
+  </div>
+  <p>Agende para rodar toda segunda, 7h. Um script de 15 linhas economiza 1 hora de relatório por semana — é o tipo de
+  detalhe que diferencia você em uma agência.</p>
+
+  <h3 id="m2-9"><span class="h3-num">2.9</span>A rotina semanal de otimização (15 minutos)</h3>
+  <ol class="list ol">
+    <li><b>Termos de pesquisa</b> — negativar lixo, promover joias (5 min);</li>
+    <li><b>Gasto × conversão por campanha</b> — CPA dentro da meta? Ótimo. Fora por 2 semanas? Diagnóstico (5 min);</li>
+    <li><b>Índice de Qualidade &lt; 5 nas top-10 palavras</b> — anúncio ou LP desalinhados (3 min);</li>
+    <li><b>Concorrentes (Insights de leilão)</b> — perdeu share de impressão? Para quem? (2 min).</li>
+  </ol>
+
+  <div class="challenge">
+    <h4><span class="ch-tag">Prática</span>Desafio do Mentor — Módulo 02</h4>
+    <p class="ch-sub">Monte a estrutura completa no papel ou em uma conta de teste.</p>
+    <ol>
+      <li>Para uma pizzaria no centro de São Paulo com R$ 2.000/mês: escolha os tipos de campanha, a proporção de verba e a estratégia de lance inicial. Justifique cada escolha.</li>
+      <li>Escreva um RSA completo (8 títulos + 3 descrições) para "clínica de fisioterapia [sua cidade]", respeitando os limites de caracteres. Controle os caracteres — anúncio rejeitado por excesso é erro de iniciante.</li>
+      <li>Monte a lista de negativas dos primeiros 3 meses de uma escola de inglês.</li>
+      <li>Explique em 5 linhas, como se fosse para um cliente leigo, por que o PMax não mostrou o anúncio na busca "exata" que ele pesquisou.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ MÓDULO 3 ============ -->
+<section class="module" id="m3" style="--acc:#0866ff">
+  <div class="mod-head">
+    <div class="mod-ghost">03</div>
+    <span class="mod-kicker">Módulo 03 · Meta Ads</span>
+    <h2>Meta Ads Profissional (Gerenciador de Anúncios)</h2>
+    <div class="mod-meta">
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>110 min</span>
+      <span>10 capítulos</span><span>Fonte: Central de Ajuda de Negócios da Meta (2025)</span>
+    </div>
+    <div class="objectives">
+      <h4>Ao final deste módulo, você será capaz de:</h4>
+      <ul>
+        <li>Navegar na hierarquia campanha → conjunto → anúncio sem hesitar e escolher o objetivo correto</li>
+        <li>Operar campanhas Advantage+ e decidir entre orçamento na campanha (CBO) ou no conjunto (ABO)</li>
+        <li>Planejar públicos frios, remarketing e semelhantes com exclusões inteligentes</li>
+        <li>Instalar e validar Pixel + API de Conversões com deduplicação</li>
+        <li>Rodar campanhas de WhatsApp — o formato que mais vende no Brasil local</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 id="m3-1"><span class="h3-num">3.1</span>A hierarquia e os 6 objetivos</h3>
+  <div class="chain">
+    <div class="node"><b>Conta de anúncios</b><span>pagamento + moeda + fuso — cria uma vez, nunca mais</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><b>Campanha</b><span>objetivo + orçamento (CBO)</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><b>Conjunto</b><span>público + posicionamentos + otimização</span></div>
+    <div class="arrow">→</div>
+    <div class="node hot"><b>Anúncio</b><span>criativo + copy + destino</span></div>
+  </div>
+  <p>A Meta consolidou os objetivos em <strong>6 famílias</strong>, cada uma com uma meta de performance que define
+  <em>por quem o leilão otimiza</em> (e não só onde o anúncio aparece):</p>
+  <div class="tbl"><div class="tbl-in"><table>
+    <thead><tr><th>Objetivo</th><th>Otimiza para</th><th>Quando usar</th></tr></thead>
+    <tbody>
+      <tr><td><b>Reconhecimento</b></td><td>Alcance / lembrança do anúncio</td><td>Marca nova, lançamento, varejo regional</td></tr>
+      <tr><td><b>Tráfego</b></td><td>Cliques / visitas (inclui destino WhatsApp)</td><td>Levar para LP, catálogo ou conversa de WhatsApp</td></tr>
+      <tr><td><b>Engajamento</b></td><td>Curtidas, comentários, mensagens, salvamentos</td><td>Aquecer página, prova social, públicos de engajamento</td></tr>
+      <tr><td><b>Leads</b></td><td>Formulário instantâneo / no site</td><td>Clínicas, imóveis, B2B — captação direta</td></tr>
+      <tr><td><b>Promoção de app</b></td><td>Instalações / eventos no app</td><td>Apps e marketplaces</td></tr>
+      <tr><td><b>Vendas</b></td><td>Conversão (Purchase, Lead no site, WhatsApp)</td><td>BOFU — é onde vive o ROAS</td></tr>
+    </tbody>
+  </table></div></div>
+  <div class="callout warn">
+    <div class="co-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0zM12 9v4M12 17h.01"/></svg></div>
+    <div class="co-body">
+      <div class="co-title">Atenção — o erro clássico de iniciante</div>
+      <p>Escolher <b>Tráfego</b> porque "clique é mais barato" e depois reclamar que "não vende". Clique barato de objetivo
+      errado é público desinteressado. O objetivo precisa espelhar a ação que paga as contas: para vender no site,
+      <b>Vendas</b>; para gerar contatos, <b>Leads</b>. Sempre.</p>
+    </div>
+  </div>
+
+  <h3 id="m3-2"><span class="h3-num">3.2</span>Advantage+: a automação virou padrão <span class="pill p-new">2025</span></h3>
+  <div class="callout new">
+    <div class="co-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></div>
+    <div class="co-body">
+      <div class="co-title">Atualização 2025</div>
+      <p>Nas campanhas de <b>Vendas</b>, a experiência <b>Advantage+</b> (compras) tornou-se o fluxo padrão do
+      Gerenciador: um conjunto único automatizado, com opção de alternar para configurações manuais. Em paralelo, o motor
+      de recuperação de anúncios foi renovado (arquitetura "Andromeda", anunciada em 2025), ampliando a personalização
+      por interesse. Tradução prática: <b>público e posicionamento varam cada vez mais automatizados — o criativo é
+      onde você diferencia</b>.</p>
+    </div>
+  </div>
+  <ul class="list">
+    <li><b>Advantage+ Público:</b> a segmentação detalhada funciona como <b>sugestão</b> — a Meta expande por conta própria. Suas <b>exclusões continuam sendo exclusões de verdade</b>: use-as para bloquear compradores recentes;</li>
+    <li><b>Advantage+ Posicionamentos:</b> deixe o sistema distribuir (Instagram, Facebook, Reels, Stories, Audience Network) — o algoritmo equilibra custo sozinho;</li>
+    <li><b>Campanha Advantage+ de compras:</b> 1 conjunto, criativos variados, público amplo + sinais (remarketing, lista de clientes). Ideal para e-commerce maduro.</li>
+  </ul>
+
+  <h3 id="m3-3"><span class="h3-num">3.3</span>Orçamento: CBO x ABO e as duas formas de escalar</h3>
+  <div class="tbl"><div class="tbl-in"><table>
+    <thead><tr><th>Modo</th><th>Onde se define</th><th>Fortaleza</th><th>Use quando</th></tr></thead>
+    <tbody>
+      <tr><td><b>CBO / Advantage campaign budget</b></td><td>Na campanha</td><td>O algoritmo realoca verba entre conjuntos para achar resultado mais barato</td><td>Escalar o que já funciona; campanhas Advantage+</td></tr>
+      <tr><td><b>ABO (orçamento por conjunto)</b></td><td>Em cada conjunto</td><td>Controle: você garante verba para cada público/teste</td><td>Testes A/B de público, campanhas de segmentação obrigatória</td></tr>
+    </tbody>
+  </table></div></div>
+  <p><b>Escala vertical:</b> aumente o orçamento <strong>até ~20% a cada 2 dias</strong> — dobrar de uma vez reinicia o
+  aprendizado. <b>Escala horizontal:</b> duplique a campanha com público criativo diferente (não igual!) para disputar
+  leilões paralelos.</p>
+
+  <h3 id="m3-4"><span class="h3-num">3.4</span>Públicos: frio, quente e semelhante</h3>
+  <div class="grid g3">
+    <div class="card"><div class="c-t">Frio (prospecção)</div><p>Quem nunca teve contato. Advantage+ Público com sugestões de interesse, ou amplo puro com bom criativo. O criativo faz a segmentação.</p></div>
+    <div class="card"><div class="c-t">Quente (remarketing)</div><p>Visitantes do site/página (Pixel), engajou com perfil/anúncio, abriu WhatsApp. Janela de 30 a 180 dias. Conversões mais baratas da conta.</p></div>
+    <div class="card"><div class="c-t">Semelhante (lookalike)</div><p>1% a 10% a partir da sua base de <b>compradores</b> (não de curtidores!). Comece pelo 1% e amplie. Em Advantage+, funciona como sinal.</p></div>
+  </div>
+  <div class="callout mentor">
+    <div class="co-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.6.5 1 1.2 1 2v.5h6v-.5c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg></div>
+    <div class="co-body">
+      <div class="co-title">Dica do Mentor — geo para negócio local</div>
+      <p>Em "Localizações", troque o padrão para <b>"Pessoas que moram neste local"</b>. O padrão inclui quem está
+      <b>de passagem</b> (pendulares, turistas) — clique caro de quem nunca vai até a sua barbearia. E para bairros
+      específicos, use pinos + raio, não só a cidade inteira.</p>
+    </div>
+  </div>
+
+  <h3 id="m3-5"><span class="h3-num">3.5</span>Funil na Meta: a arquitetura de 3 camadas</h3>
+  <div class="tbl"><div class="tbl-in"><table>
+    <thead><tr><th>Camada</th><th>Público</th><th>Objetivo</th><th>Verba típica</th></tr></thead>
+    <tbody>
+      <tr><td><b>Topo</b></td><td>Frio amplo</td><td>Reconhecimento / Tráfego / Vendas com criativo de valor</td><td>30–50%</td></tr>
+      <tr><td><b>Meio</b></td><td>Engajou / visitou</td><td>Tráfego / Engajamento para LP, aquecer</td><td>20–30%</td></tr>
+      <tr><td><b>Fundo</b></td><td>Remarketing quente (add to cart, WhatsApp aberto)</td><td>Vendas / Leads com oferta e urgência</td><td>20–40%</td></tr>
+    </tbody>
+  </table></div></div>
+  <p>Em contas pequenas, comece com <strong>uma campanha de Vendas fria + uma de remarketing</strong>. Funil de 5
+  campanhas com R$ 30/dia fragmenta demais o aprendizado.</p>
+
+  <h3 id="m3-6"><span class="h3-num">3.6</span>Criativos que carregam a conta</h3>
+  <p>Na era Advantage+, <strong>o criativo é o novo targeting</strong>. Especificações que você deve saber de cor:</p>
+  <div class="tbl"><div class="tbl-in"><table>
+    <thead><tr><th>Formato</th><th>Proporção / tamanho</th><th>Observação</th></tr></thead>
+    <tbody>
+      <tr><td><b>Reels / Stories</b></td><td>9:16 · 1080×1920</td><td>Vídeo de 15s ou menos; zona de texto central segura</td></tr>
+      <tr><td><b>Feed vertical</b></td><td>4:5 · 1080×1350</td><td>Maior área na tela do celular — padrão para estáticos</td></tr>
+      <tr><td><b>Feed quadrado</b></td><td>1:1 · 1080×1080</td><td>Universal; carrossel usa cartões 1:1 (3 a 10)</td></tr>
+      <tr><td><b>Link / coleção</b></td><td>1,91:1 · 1200×628</td><td>Coleção com capa + catálogo para e-commerce</td></tr>
+      <tr><td><b>Textos</b></td><td>125 (primário visível) · 40 (título) · 30 (descrição)</td><td>Primeira linha decide tudo — escreva a oferta nela</td></tr>
+    </tbody>
+  </table></div></div>
+  <h4>Padrões de hook que funcionam (adapte, não copie)</h4>
+  <ul class="list">
+    <li><b>Pergunta de dor:</b> "Você adia o dentista por medo do preço?"</li>
+    <li><b>Contraste:</b> "Academia cheia às 18h? O treino é na sua sala, em 25 minutos."</li>
+    <li><b>Prova imediata:</b> "4,9 estrelas em 1.200 avaliações — veja por quê em 15 segundos."</li>
+    <li><b>Oferta direta:</b> "Pizza grande + refrigerante por R$ 39,90 hoje, no seu endereço."</li>
+  </ul>
+  <p>Produza <strong>3 a 5 criativos por conjunto</strong> com ângulos diferentes (dor, desejo, prova, oferta) e monitore
+  a fadiga: <strong>frequência acima de ~3,5–4 no mesmo público</strong> pede criativo novo.</p>
+
+  <h3 id="m3-7"><span class="h3-num">3.7</span>Click-to-WhatsApp: a máquina de vendas local do Brasil</h3>
+  <p>O anúncio abre uma conversa no WhatsApp com <strong>mensagem pré-preenchida</strong> — perfeito para restaurantes,
+  clínicas, salões, prestadores e qualquer negócio com ciclo de venda por conversa.</p>
+  <ol class="list ol">
+    <li>Crie a campanha com objetivo <b>Tráfego</b> (destino: WhatsApp) ou <b>Vendas/Leads</b> otimizada para conversas iniciadas;</li>
+    <li>Vincule o número do WhatsApp Business (de preferência com catálogo e respostas rápidas configuradas);</li>
+    <li>Escreva a mensagem pré-preenchida como se fosse o cliente: <i>"Oi! Quero saber sobre a promoção de segunda-feira"</i>;</li>
+    <li>Responda <b>em menos de 15 minutos</b> no horário comercial — velocidade de resposta é a variável nº 1 de fechamento;</li>
+    <li>Meça além da conversa: quantas conversas viraram <b>pedido/agendamento</b> (marque via CRM ou planilha de atendimento).</li>
+  </ol>
+
+  <h3 id="m3-8"><span class="h3-num">3.8</span>Pixel + API de Conversões (CAPI)</h3>
+  <p>O Pixel (navegador) sozinho perde eventos por bloqueadores e restrições de navegadores/iOS. A <strong>API de
+  Conversões</strong> envia eventos <strong>do servidor</strong>, recuperando essa perda e melhorando a otimização.</p>
+  <ul class="list">
+    <li><b>Eventos padrão essenciais:</b> PageView, ViewContent, AddToCart, InitiateCheckout, Purchase (e-commerce); Lead, Contact, Schedule (serviços);</li>
+    <li><b>Configuração:</b> Gerenciador de Eventos → Fonte de dados → adicione o Pixel no site e a CAPI via integração (Gateway oficial da Meta, plugin de plataforma ou código próprio);</li>
+    <li><b>Deduplicação obrigatória:</b> quando Pixel e CAPI enviam o mesmo evento, use o mesmo <span class="tag">event_id</span> nos dois para a Meta contar uma vez;</li>
+    <li><b>Qualidade:</b> acompanhe o <b>Event Match Quality</b> (0–10) por evento — acima de 6 é o alvo; inclua e-mail/telefone hasheados quando possível;</li>
+    <li>Atribuição padrão da Meta: <b>7 dias por clique + 1 dia por visualização</b> — nunca compare com o "last click" do Google sem explicar a diferença ao cliente.</li>
+  </ul>
+
+  <h3 id="m3-9"><span class="h3-num">3.9</span>Diagnóstico: a tabela que salva contas</h3>
+  <div class="tbl"><div class="tbl-in"><table>
+    <thead><tr><th>Sintoma</th><th>Causas prováveis (em ordem)</th><th>Remédio</th></tr></thead>
+    <tbody>
+      <tr><td><b>CPM alto</b></td><td>Público estreito; criativo fraco; leilão do nicho caro (data-festa)</td><td>Ampliar público; trocar criativo; revisar posicionamentos</td></tr>
+      <tr><td><b>CTR baixo (&lt;1%)</b></td><td>Hook fraco; público frio demais para a oferta</td><td>Novos hooks 3s; separar oferta agressiva para remarketing</td></tr>
+      <tr><td><b>Frequência &gt; 4</b></td><td>Público pequeno + verba alta</td><td>Novos criativos; ampliar público; pausar e reabrir com pausa programada</td></tr>
+      <tr><td><b>CTR bom, conversão ruim</b></td><td>LP lenta/sem congruência; promessa descumprida</td><td>Corrigir a LP (Módulo 6) antes de mexer mais no anúncio</td></tr>
+      <tr><td><b>CPA subiu de repente</b></td><td>Fadiga; concorrência; rastreamento quebrado</td><td>Testar Pixel em tempo real; ver datas vs. mudanças; criativo novo</td></tr>
+    </tbody>
+  </table></div></div>
+
+  <h3 id="m3-10"><span class="h3-num">3.10</span>Políticas: como não perder a conta</h3>
+  <ul class="list">
+    <li><b>Atributos pessoais:</b> proibido "Você tem acne? Resolva!" — não insinuar que a pessoa tem uma condição. Correto: "Tratamento para pele com acne — agende avaliação";</li>
+    <li><b>Antes e depois:</b> proibido em saúde/estética (e imagens de corpo idealizado com setas);</li>
+    <li><b>Promessas:</b> "cure", "garantido", "emagreça 10kg em 7 dias" — bloqueio certo;</li>
+    <li><b>Dados sensíveis:</b> saúde, religião, política, orientação não podem ser alvo de segmentação;</li>
+    <li>Anúncio reprovado injustamente? Solicite revisão pelo Gerenciador — e nunca reenvie o mesmo criativo em loop (risco de conta flagrada).</li>
+  </ul>
+
+  <div class="challenge">
+    <h4><span class="ch-tag">Prática</span>Desafio do Mentor — Módulo 03</h4>
+    <p>Essas são as perguntas que selecionam candidatos em agência. Treine.</p>
+    <ol>
+      <li>Escreva o texto completo de um anúncio (primário + título + descrição) de click-to-WhatsApp para uma marmitaria fitness, respeitando os limites de caracteres.</li>
+      <li>Monte a estrutura completa (campanhas, conjuntos, públicos, verbas) para um e-commerce de R$ 10.000/mês — cold, warm, hot com valores.</li>
+      <li>Sua conta tem Pixel + CAPI duplicando compras. Explique o problema e como resolver.</li>
+      <li>CPM dobrou na semana da Black Friday sem mudança sua. Explique o fenômeno ao "cliente irritado" em 3 frases.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ MÓDULO 4 ============ -->
+<section class="module" id="m4" style="--acc:#34d399">
+  <div class="mod-head">
+    <div class="mod-ghost">04</div>
+    <span class="mod-kicker">Módulo 04 · Dados</span>
+    <h2>Rastreamento &amp; Dados</h2>
+    <div class="mod-meta">
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>70 min</span>
+      <span>6 capítulos</span><span>Ferramentas: GA4, Tag do Google, Looker Studio</span>
+    </div>
+    <div class="objectives">
+      <h4>Ao final deste módulo, você será capaz de:</h4>
+      <ul>
+        <li>Executar o checklist de rastreamento completo antes de qualquer campanha ir ao ar</li>
+        <li>Configurar GA4, ações de conversão do Google Ads e eventos da Meta sem duplicar nada</li>
+        <li>Usar conversões otimizadas (web e leads) e importar conversões offline do CRM</li>
+        <li>Padronizar UTMs com ValueTrack para atribuir cada venda à campanha certa</li>
+        <li>Montar um dashboard que o cliente entende em 30 segundos</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 id="m4-1"><span class="h3-num">4.1</span>O checklist antes do primeiro real</h3>
+  <p>Um gestor profissional nunca ativa uma campanha sem passar por esta lista. Imprima-a:</p>
+  <ul class="list">
+    <li>Conversões do Google Ads criadas e <b>testadas com clique real</b> (formulaário, ligação, WhatsApp);</li>
+    <li>Pixel da Meta instalado, eventos padrão disparando no Gerenciador de Eventos + CAPI com deduplicação;</li>
+    <li>GA4 criado, tag do Google no site, eventos-chave (key events) marcados;</li>
+    <li>Página de "obrigado" exclusiva para formulários (rastrear a visita a ela = conversão à prova de falha);</li>
+    <li>LP com UTMs padronizadas (4.4) em todos os destinos de anúncio;</li>
+    <li>Teste em 3 passos: abra o anúncio → preencha o formulário → veja a conversão aparecer no relatório de tempo real das duas plataformas.</li>
+  </ul>
+  <div class="callout warn">
+    <div class="co-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0zM12 9v4M12 17h.01"/></svg></div>
+    <div class="co-body">
+      <div class="co-title">Atenção</div>
+      <p>Rastreamento quebrado = lances inteligentes otimizando para o nada. <b>90% dos casos de "o algoritmo parou de
+      converter da noite para o dia" são tag que caiu do site, formulário que mudou de URL ou app que bloqueou o
+      script.</b> Verifique o tempo real antes de culpar o leilão.</p>
+    </div>
+  </div>
+
+  <h3 id="m4-2"><span class="h3-num">4.2</span>GA4 essencial para tráfego</h3>
+  <ul class="list">
+    <li><b>Eventos automáticos</b> (page_view, session_start) já vêm; os seus — scroll, click WhatsApp, submit de formulário — são <b>eventos personalizados</b> ou "eventos recomendados";</li>
+    <li><b>Key events</b> (ex-"conversões"): marque como chave apenas o que paga as contas — Lead, Purchase. Marcar 15 eventos como chave confunde os lances;</li>
+    <li><b>Vincule o GA4 ao Google Ads</b> (Admin → Vinculações do produto) para importar públicos e conversões nos dois sentidos;</li>
+    <li>Atribuição do GA4 é <b>baseada em dados (data-driven)</b> por padrão — ela distribui crédito por múltiplos toques, diferente do "último clique" do Google Ads. Ao reportar, explique qual modelo está usando;</li>
+    <li>Explore os <b>Relatórios de exploração</b> (caminho, coorte, funil) para responder perguntas que os relatórios padrão não respondem.</li>
+  </ul>
+
+  <h3 id="m4-3"><span class="h3-num">4.3</span>Conversões no Google Ads — o modelo profissional</h3>
+  <div class="tbl"><div class="tbl-in"><table>
+    <thead><tr><th>Configuração</th><th>Fazer o quê</th><th>Por quê</th></tr></thead>
+    <tbody>
+      <tr><td><b>Primária × secundária</b></td><td>Primária: a ação que otimiza (Lead qualificado / Compra). Secundária: sinais de apoio (WhatsApp clicado, página vista)</td><td>Lances inteligentes otimizam só pelas primárias — muitas primárias = otimização esquizofrênica</td></tr>
+      <tr><td><b>Contagem</b></td><td>"Uma" para leads; "Todas" para compras por sessão</td><td>Um formulário enviado = 1 lead, não 5 visitas a /obrigado</td></tr>
+      <tr><td><b>Janela</b></td><td>30 dias por clique (padrão) — 90 para imóveis/altos tickets</td><td>Ciclo de venda longo precisa de janela longa</td></tr>
+      <tr><td><b>Conversões otimizadas (web)</b></td><td>Ativar com e-mail hasheado</td><td>Recupera conversões perdidas por cookies e melhora a correspondência</td></tr>
+      <tr><td><b>Conversões otimizadas (leads)</b></td><td>Enviar GCLID + e-mail do lead; depois devolver "lead virou venda"</td><td>O algoritmo passa a lances para <b>leads que compram</b>, não só formulários preenchidos</td></tr>
+    </tbody>
+  </table></div></div>
+  <p><b>Conversões offline (ex.: clínica):</b> o atendimento marca na planilha/CRM quais leads compareceram e compraram;
+  o upload (ou integração) devolve esse sinal ao Google Ads. É o upgrade de maturidade mais barato que uma conta de
+  serviços pode receber.</p>
+
+  <h3 id="m4-4"><span class="h3-num">4.4</span>UTMs + ValueTrack: cada real rastreável</h3>
+  <div class="code">
+    <div class="code-head"><span class="code-file">modelo-utms.txt — sufixo de URL das campanhas</span><button class="copy">Copiar</button></div>
+    <pre><code><span class="cm"># Padrão de sufixo final para campanhas de Search:</span>
+?utm_source=google&amp;utm_medium=cpc
+&amp;utm_campaign={campaignid}
+&amp;utm_content={creative}
+&amp;utm_term={keyword}
+
+<span class="cm"># ValueTrack: o Google substitui os campos dinamicamente:</span>
+<span class="cm">#  {campaignid}  → id da campanha (estável, imune a troca de nome)</span>
+<span class="cm">#  {adgroupid}   → id do grupo</span>
+<span class="cm">#  {keyword}     → palavra exata que disparou</span>
+<span class="cm">#  {matchtype}   → e (exata), p (frase), b (ampla)</span>
+<span class="cm">#  {device}      → m (mobile), t (tablet), c (desktop)</span>
+<span class="cm">#  {network}     → g (busca), s (parceiro), d (display)</span>
+<span class="cm">#  {lpurl}       → URL final limpa</span>
+
+<span class="cm"># Meta Ads: ative "URL com parâmetros UTM" no anúncio:
+utm_source=facebook&amp;utm_medium=paid
+&amp;utm_campaign={{campaign.name}}&amp;utm_content={{ad.name}}</span></code></pre>
+  </div>
+  <p>Regra de ouro: <strong>IDs para máquinas, nomes para humanos</strong>. Use {campaignid} no parâmetro (nunca muda)
+  e mantenha uma tabela de tradução no seu plano de mídia. No GA4, os relatórios de tráfego passam a separar tudo sem
+  colisão de nomes.</p>
+
+  <h3 id="m4-5"><span class="h3-num">4.5</span>Dashboard no Looker Studio que cliente entende</h3>
+  <p>Conecte Google Ads + GA4 + planilha (para vendas do CRM) e monte 1 página com:</p>
+  <div class="kpis">
+    <div class="kpi"><div class="kpi-n">R$</div><div class="kpi-l">Investimento total no período (com comparativo anterior)</div></div>
+    <div class="kpi"><div class="kpi-n">Conv.</div><div class="kpi-l">Leads/vendas por canal (Google vs Meta)</div></div>
+    <div class="kpi"><div class="kpi-n">CPL</div><div class="kpi-l">Custo por lead com linha de meta</div></div>
+    <div class="kpi"><div class="kpi-n">ROAS</div><div class="kpi-l">Receita rastreada ÷ verba (e-commerce)</div></div>
+  </div>
+  <p>Adicione um gráfico de linhas por semana e uma tabela por campanha. <strong>Menos é mais</strong>: dashboard de 6
+  blocos que o dono da pizzaria entende vale mais que 40 gráficos que só você entende.</p>
+
+  <h3 id="m4-6"><span class="h3-num">4.6</span>LGPD e Consent Mode</h3>
+  <p>No Brasil, a LGPD exige consentimento para cookies de marketing. Na prática profissional:</p>
+  <ul class="list">
+    <li>Instale um <b>banner de consentimento</b> (CMP) na landing page antes de ativar tags de anúncio;</li>
+    <li>Configure o <b>Consent Mode v2</b> do Google (obrigatório para tráfego da Europa desde 2024 e boa prática global): tags carregam em modo de consentimento negado e enviam <b>dados agregados sem cookies</b> — sua medição não zera;</li>
+    <li>Política de privacidade + link visível na LP (o Checklist do Módulo 6 cobra isso);</li>
+    <li>Para a Meta, o mesmo banner controla o Pixel — perguntas de "dados de eventos" ficam resolvidas no Gerenciador de Eventos.</li>
+  </ul>
+
+  <div class="challenge">
+    <h4><span class="ch-tag">Prática</span>Desafio do Mentor — Módulo 04</h4>
+    <p class="ch-sub">Rastreamento é o que separa "operador de plataforma" de gestor.</p>
+    <ol>
+      <li>Descreva o fluxo completo de rastreamento para uma clínica: clique → LP → formulário → ligação da secretária → consulta → tratamento. Onde entra cada conversão (primária/secundária/offline)?</li>
+      <li>Uma conta tem 8 conversões primárias e CPA oscilando 70% semana a semana. Diagnostique e proponha a correção.</li>
+      <li>Escreva a UTM completa de um anúncio de Search mobile de frase para a campanha 20948715.</li>
+      <li>Explique a um cliente por que a Meta reporta 40 vendas e o Google 22 para a mesma semana, sem que nenhum esteja "errado".</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ MÓDULO 5 ============ -->
+<section class="module" id="m5" style="--acc:#fb7185">
+  <div class="mod-head">
+    <div class="mod-ghost">05</div>
+    <span class="mod-kicker">Módulo 05 · Otimização</span>
+    <h2>Testes A/B &amp; Otimização Científica</h2>
+    <div class="mod-meta">
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>65 min</span>
+      <span>7 capítulos</span><span>Ferramentas: Experimentos do Google Ads e da Meta</span>
+    </div>
+    <div class="objectives">
+      <h4>Ao final deste módulo, você será capaz de:</h4>
+      <ul>
+        <li>Formular hipóteses de teste no padrão "Se… então… porque…"</li>
+        <li>Calcular significância estatística e tamanho de amostra antes de rodar o teste</li>
+        <li>Operar Rascunhos e Experimentos no Google Ads e testes A/B na Meta</li>
+        <li>Montar e priorizar um backlog de testes com matriz ICE</li>
+        <li>Evitar os 7 erros que invalidam experimentos</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 id="m5-1"><span class="h3-num">5.1</span>Otimizar com método, não com achismo</h3>
+  <p>Semana boa não é otimização; terça-feira ruim não é crise. O teste A/B existe para separar
+  <strong>sinal</strong> (mudança real de comportamento) de <strong>ruído</strong> (variação natural do leilão). A regra
+  da casa: <strong>nenhuma mudança estrutural em campanha ou landing page sem hipótese e sem medição</strong>.</p>
+
+  <h3 id="m5-2"><span class="h3-num">5.2</span>A metodologia dos 7 passos</h3>
+  <ol class="steps">
+    <li><span class="s-num">01</span><div><h4>Defina a métrica e o tamanho do efeito</h4><p>Qual número o teste muda (taxa de conversão, CPA, CTR) e qual diferença mínima importa comercialmente (MDE — ex.: +20% na conversão da LP).</p></div></li>
+    <li><span class="s-num">02</span><div><h4>Escreva a hipótese no padrão</h4><p>"<b>Se</b> mudarmos X, <b>então</b> a métrica Y melhora pelo menos Z%, <b>porque</b> [razão de comportamento]." Sem "porque" psicológico, é chute.</p></div></li>
+    <li><span class="s-num">03</span><div><h4>Isole UMA variável</h4><p>Título OU imagem OU oferta — nunca tudo junto. Múltiplas variáveis = você aprende que "algo" mudou, mas não o quê funcionou.</p></div></li>
+    <li><span class="s-num">04</span><div><h4>Calcule a amostra antes</h4><p>Use uma calculadora (95% de confiança, poder de 80%). Rodar sem amostra mínima é jogar moeda com dinheiro do cliente.</p></div></li>
+    <li><span class="s-num">05</span><div><h4>Rode tempo suficiente</h4><p>No mínimo 2 semanas (1 ciclo completo de dia da semana) OU até bater a amostra — o que for maior.</p></div></li>
+    <li><span class="s-num">06</span><div><h4>Não espie antes da hora</h4><p>Olhar todo dia e parar "porque está ganhando" infla falsos vencedores. Defina a data de veredito e respeite-a.</p></div></li>
+    <li><span class="s-num">07</span><div><h4>Decida e documente</h4><p>p-valor &lt; 0,05 → aplica o vencedor. Senão → mantém o controle e volta ao backlog. Registre no log de testes (modelo nos Extras).</p></div></li>
+  </ol>
+
+  <h3 id="m5-3"><span class="h3-num">5.3</span>Significância na prática (com números)</h3>
+  <div class="callout example">
+    <div class="co-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M8 3v5l-5.2 9.5A2 2 0 0 0 4.6 20h14.8a2 2 0 0 0 1.8-2.5L16 8V3M7 14h10"/></svg></div>
+    <div class="co-body">
+      <div class="co-title">Exemplo 1 — o "vencedor" que não era (2.000 visitantes por braço)</div>
+      <p>Versão A: 48 conversões (2,40%). Versão B: 62 conversões (3,10%). Parece vitória de B, certo?<br>
+      Teste z de duas proporções: <b>z = 1,35 · p-valor = 0,176</b>. Como 0,176 &gt; 0,05, <b>a diferença não é
+      estatisticamente significativa</b> — pode ser puro ruído. Ação correta: continuar o teste ou aumentar a amostra.
+      Declarar B vencedor aqui é a farsa mais comum em relatórios de agência.</p>
+    </div>
+  </div>
+  <div class="callout example">
+    <div class="co-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M8 3v5l-5.2 9.5A2 2 0 0 0 4.6 20h14.8a2 2 0 0 0 1.8-2.5L16 8V3M7 14h10"/></svg></div>
+    <div class="co-body">
+      <div class="co-title">Exemplo 2 — diferença real (mesma amostra)</div>
+      <p>Versão A: 40 conversões (2,00%). Versão B: 72 conversões (3,60%).<br>
+      <b>z = 3,07 · p-valor = 0,0022</b> — significativo a 95%. Intervalo de confiança de B: 3,60% ± 0,82%.
+      Agora sim: aplique B permanentemente e <b>documente o aprendizado</b> ("prova social acima do dobro no primeiro
+      scroll elevou conversão em +80% relativo").</p>
+    </div>
+  </div>
+  <p>Calculadoras gratuitas: busque por "calculadora de significância A/B" (ABTestguide, Evan Miller, Neil Patel) — o
+  que importa é entender o que elas respondem: <strong>"se não houvesse diferença real, qual a chance de eu ver uma
+  diferença assim por sorte?"</strong>. Essa chance é o p-valor.</p>
+
+  <h3 id="m5-4"><span class="h3-num">5.4</span>Quanto tráfego você precisa?</h3>
+  <p>Com taxa-base de 2,4% e alvo de +30% relativo (chegar a 3,1%), confiança 95% e poder 80%:
+  <strong>~8.100 visitantes por braço</strong>. Relaxando o alvo para +50%: <strong>~3.200 por braço</strong>.
+  Consequências práticas:</p>
+  <ul class="list">
+    <li>Pouco tráfego? Teste <b>mudanças grandes</b> (oferta inteira, layout, público) — efeitos pequenos são indetectáveis;</li>
+    <li>Muito tráfego? Aí sim teste micro-elementos (cor de botão, microcopy);</li>
+    <li>Nas plataformas, use os testes nativos (5.6) quando não consegue dividir o tráfego por conta própria.</li>
+  </ul>
+
+  <h3 id="m5-5"><span class="h3-num">5.5</span>O que testar: backlog com matriz ICE</h3>
+  <div class="tbl"><div class="tbl-in"><table>
+    <thead><tr><th>Hipótese (exemplos reais)</th><th>Impacto</th><th>Confiança</th><th>Facilidade</th><th>ICE</th></tr></thead>
+    <tbody>
+      <tr><td>LP: mover prova social para o 1º scroll</td><td>9</td><td>7</td><td>8</td><td><b>24</b></td></tr>
+      <tr><td>Anúncio: headline com número ("Em 30 min")</td><td>8</td><td>7</td><td>9</td><td><b>24</b></td></tr>
+      <tr><td>LP: reduzir formulário de 6 para 3 campos</td><td>7</td><td>8</td><td>7</td><td><b>22</b></td></tr>
+      <tr><td>Meta: UGC (vídeo cliente) vs. producido</td><td>8</td><td>6</td><td>5</td><td>19</td></tr>
+      <tr><td>Google: tCPA 66 vs 74</td><td>6</td><td>6</td><td>9</td><td>21</td></tr>
+    </tbody>
+  </table></div></div>
+  <p>Nota de 1 a 10 em cada dimensão, soma = prioridade. Teste sempre o topo da lista — nunca "o que dá vontade".</p>
+
+  <h3 id="m5-6"><span class="h3-num">5.6</span>Testes nativos: Google Ads e Meta</h3>
+  <div class="grid g2">
+    <div class="card">
+      <div class="c-t">Google Ads — Rascunhos e Experimentos</div>
+      <p>Crie um <b>rascunho</b> da campanha (mude UMA coisa: lance, estrutura, correspondência), promova a
+      <b>experimento</b> com divisão de tráfego (ex.: 50/50) por 2–4 semanas. A tela de resultados devolve significância
+      para a métrica escolhida. Use para validar mudanças assustadoras (ex.: ligar correspondência ampla) sem risco total.</p>
+    </div>
+    <div class="card">
+      <div class="c-t">Meta — Experimentos (A/B test)</div>
+      <p>No Gerenciador: <b>Experimentos</b> → comparar versões de campanha, conjunto ou anúncio com divisão igual de
+      público, com "escolher vencedor automaticamente". Perfeito para CBO vs ABO, criativo A vs B, ou público amplo vs
+      semelhante. Fora dos experimentos, dividir orçamento igualmente entre conjuntos (ABO) é a forma manual — menos limpa,
+      mas funciona para criativos.</p>
+    </div>
+  </div>
+
+  <h3 id="m5-7"><span class="h3-num">5.7</span>Os 7 erros que invalidam um teste</h3>
+  <ol class="list ol">
+    <li><b>Espiar e parar cedo</b> — o "vencedor da 3ª noite" desvanece na 4ª;</li>
+    <li><b>Testar múltiplas variáveis</b> — resultado ininterpretável;</li>
+    <li><b>Duração curta demais</b> — sem cobrir um ciclo de dias da semana (fim de semana muda tudo);</li>
+    <li><b>Contaminação</b> — remarketing servindo os dois braços com criativos cruzados;</li>
+    <li><b>Sazonalidade ignorada</b> — teste de 7 dias no Natal "prova" qualquer coisa;</li>
+    <li><b>Empate tratado como vitória</b> — p = 0,20 não é "tendência de vitória", é ruído;</li>
+    <li><b>Mudar outra coisa no meio</b> — mexer no orçamento na semana 2 mata a comparabilidade.</li>
+  </ol>
+
+  <div class="challenge">
+    <h4><span class="ch-tag">Prática</span>Desafio do Mentor — Módulo 05</h4>
+    <p class="ch-sub">Este exercício aparece em processos seletivos de agência.</p>
+    <ol>
+      <li>Escreva 5 hipóteses completas (Se/Então/Porque) para uma pizzaria com LP que converte 1,8% e classifique por ICE.</li>
+      <li>Seu teste A/B parou com p = 0,08 e B 12% à frente. Qual a decisão correta? Por quê?</li>
+      <li>Com verba de R$ 60/dia e CPC médio de R$ 2, quantos dias até ~8.100 visitas por braço? O que isso te obriga a concluir sobre o MDE viável?</li>
+      <li>Desenhe um experimento no Google Ads para validar a troca de "Maximizar conversões" para "tCPA 70" sem colocar a conta em risco.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ MÓDULO 6 ============ -->
+<section class="module" id="m6" style="--acc:#22d3ee">
+  <div class="mod-head">
+    <div class="mod-ghost">06</div>
+    <span class="mod-kicker">Módulo 06 · Conversão</span>
+    <h2>Landing Pages de Alta Conversão</h2>
+    <div class="mod-meta">
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>85 min</span>
+      <span>10 capítulos</span><span>Copywriting + estrutura técnica</span>
+    </div>
+    <div class="objectives">
+      <h4>Ao final deste módulo, você será capaz de:</h4>
+      <ul>
+        <li>Desenhar a anatomia completa de uma LP que converte, bloco por bloco</li>
+        <li>Escrever títulos e CTAs com as fórmulas AIDA, PAS e 4U</li>
+        <li>Reduzir fricção em formulários e botões de WhatsApp</li>
+        <li>Garantir congruência anúncio → página de destino</li>
+        <li>Publicar só depois de passar no checklist de QA de 20 itens</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 id="m6-1"><span class="h3-num">6.1</span>Landing page não é site</h3>
+  <p>Um site institucional apresenta a empresa; uma <strong>landing page tem um único trabalho: converter o visitante
+  do anúncio em uma ação</strong> (agendar, pedir, cadastrar, comprar). Isso significa: sem menu com 8 links, sem blog,
+  sem distração — <strong>uma promessa, uma página, um botão</strong>. Enviar tráfego pago para a home do site é pagar
+  aluguel de outdoor no meio do deserto.</p>
+
+  <h3 id="m6-2"><span class="h3-num">6.2</span>A anatomia da página (blocos em ordem)</h3>
+  <div class="chain">
+    <div class="node hot"><b>1 · Hero</b><span>título + sub + CTA visíveis no 1º scroll</span></div>
+    <div class="arrow">↓</div>
+    <div class="node"><b>2 · Dor → Solução</b><span>3 dores em cards com a ponte para o serviço</span></div>
+    <div class="arrow">↓</div>
+    <div class="node"><b>3 · Como funciona</b><span>3 passos numerados (simples reduz ansiedade)</span></div>
+    <div class="arrow">↓</div>
+    <div class="node"><b>4 · Prova social</b><span>depoimentos com nome, foto e resultado</span></div>
+    <div class="arrow">↓</div>
+    <div class="node"><b>5 · Oferta + urgência</b><span>o pacote, o preço-âncora, o limite real</span></div>
+    <div class="arrow">↓</div>
+    <div class="node"><b>6 · FAQ</b><span>as 5–7 objeções que travam a compra</span></div>
+    <div class="arrow">↓</div>
+    <div class="node hot"><b>7 · CTA final</b><span>+ rodapé com endereço, CNPJ, política</span></div>
+  </div>
+  <p>No mobile, adicione uma <strong>barra fixa de CTA</strong> que aparece depois de ~40% da rolagem: costuma render
+  10–20% de aumento em cliques sem tocar no resto da página.</p>
+
+  <h3 id="m6-3"><span class="h3-num">6.3</span>Copywriting: fórmulas e banco de títulos</h3>
+  <div class="grid g3">
+    <div class="card"><div class="c-t">AIDA</div><p><b>A</b>tenção (título de dor/desejo) → <b>I</b>nteresse (mecanismo) → <b>D</b>esejo (prova) → <b>A</b>ção (CTA). O esqueleto padrão de página inteira.</p></div>
+    <div class="card"><div class="c-t">PAS</div><p><b>P</b>roblema → <b>A</b>gravação → <b>S</b>olução. Imbatível para criativo e para o bloco "dor → solução".</p></div>
+    <div class="card"><div class="c-t">4U</div><p>Título <b>Ú</b>til, <b>U</b>rgente, <b>Ú</b>nico, <b>U</b>ltra-específico. Nota de 0 a 10 no seu título: abaixo de 6, reescreva.</p></div>
+  </div>
+  <h4>Banco de títulos (adapte os colchetes)</h4>
+  <div class="tbl"><div class="tbl-in"><table>
+    <thead><tr><th>Nicho</th><th>Título de hero pronto para adaptar</th><th>CTA do botão</th></tr></thead>
+    <tbody>
+      <tr><td>Clínica</td><td>Avaliação + Raio-X sem Custo: Descubra em 20 Minutas o Plano do Seu Tratamento</td><td>Agendar minha avaliação</td></tr>
+      <tr><td>Restaurante</td><td>Pizza de Fermentação Natural na Sua Porta em Até 30 Minutos</td><td>Pedir pelo WhatsApp</td></tr>
+      <tr><td>Imobiliária</td><td>Apartamentos de 2 Dormitórios a partir de R$ 350 mil no [Bairro] — Tour Virtual Hoje</td><td>Ver unidades disponíveis</td></tr>
+      <tr><td>E-commerce</td><td>Tênis de Corrida com Drop de 20% + Frete Grátis Acima de R$ 199</td><td>Aproveitar agora</td></tr>
+      <tr><td>Serviço B2B</td><td>Reduza em 30% as Faltas da Sua Clínica com Agendamento Automático por WhatsApp</td><td>Receber demonstração</td></tr>
+      <tr><td>Infoproduto</td><td>Aula Gratuita: Como Anunciar no Google sem Queimar Verba em 7 Dias</td><td>Garantir minha vaga</td></tr>
+    </tbody>
+  </table></div></div>
+  <div class="callout mentor">
+    <div class="co-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.6.5 1 1.2 1 2v.5h6v-.5c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg></div>
+    <div class="co-body">
+      <div class="co-title">Dica do Mentor</div>
+      <p>O botão nunca diz "Enviar" nem "Cadastrar". Ele repete o desejo do cliente: <b>"Quero minha avaliação"</b>,
+      <b>"Quero o desconto de hoje"</b>, <b>"Falar com especialista agora"</b>. E o CTA aparece <b>3 a 5 vezes</b> na
+      página — cada seção termina com a próxima chance de clicar.</p>
+    </div>
+  </div>
+
+  <h3 id="m6-4"><span class="h3-num">6.4</span>Confiança: o bloco mais subestimado</h3>
+  <ul class="list">
+    <li><b>Depoimentos com rosto e nome</b> (e resultado: "agendou em 1 dia", "voltou a correr sem dor") — depoimento anônimo não convence ninguém;</li>
+    <li><b>Números da operação:</b> "+12.000 atendimentos", "4,9 no Google com 800 avaliações" (só se verdadeiro e verificável);</li>
+    <li><b>Garantias e selos:</b> garantia de 7 dias, pagamento seguro, parcerias — reduzem o medo do primeiro clique;</li>
+    <li><b>Case rápido:</b> um mini-antes/depois comercial ("de 3 para 27 agendamentos/semana") vale mais que 3 parágrafos sobre a missão da empresa.</li>
+  </ul>
+
+  <h3 id="m6-5"><span class="h3-num">6.5</span>Formulários e WhatsApp: engenharia de fricção</h3>
+  <ul class="list">
+    <li><b>Campos mínimos:</b> Nome + WhatsApp é o padrão-ouro de lead local. Cada campo extra cobra um pedágio na conversão; justifique cada um;</li>
+    <li><b>Botão de WhatsApp direto</b> com mensagem pré-preenchida: <span class="tag">wa.me/55DDDN?text=Quero%20agendar</span> — rastreie o clique como evento;</li>
+    <li><b>Página de obrigado</b> obrigatória: além de agradecer, ela é o gatilho limpo da conversão (GA4, Google Ads e Pixel apontam para ela);</li>
+    <li>Teste A/B permanente: formulário curto × botão de WhatsApp costuma ser um dos primeiros testes de qualquer conta local.</li>
+  </ul>
+
+  <h3 id="m6-6"><span class="h3-num">6.6</span>Velocidade e técnica (o Google e o usuário agradecem)</h3>
+  <ul class="list">
+    <li><b>&lt; 3 segundos no 4G</b> — a cada segundo extra, a intenção de compra derrete. Teste com o PageSpeed Insights;</li>
+    <li>Imagens em <b>WebP comprimido</b>, lazy loading, vídeo de fundo só com razão forte (e nunca autoplay com som);</li>
+    <li><b>Mobile-first de verdade:</b> 80–95% do tráfego de anúncio local vem do celular; abra a página no seu telefone antes de aprovar;</li>
+    <li>HTTPS, favicon, meta tags de título/descrição e Open Graph (o link compartilhado no WhatsApp precisa parecer profissional);</li>
+    <li>A experiência da LP é um dos 3 componentes do Índice de Qualidade (Módulo 1) — página rápida é também anúncio mais barato.</li>
+  </ul>
+
+  <h3 id="m6-7"><span class="h3-num">6.7</span>Congruência anúncio → página</h3>
+  <div class="callout example">
+    <div class="co-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M8 3v5l-5.2 9.5A2 2 0 0 0 4.6 20h14.8a2 2 0 0 0 1.8-2.5L16 8V3M7 14h10"/></svg></div>
+    <div class="co-body">
+      <div class="co-title">Exemplo — antes e depois</div>
+      <p><b>Anúncio:</b> "Avaliação + Raio-X sem Custo — Agende Hoje".<br>
+      <b>LP errada (incongruente):</b> título "Bem-vindo à Clínica OdontoPrime, 15 anos de tradição" e o raio-x grátis
+      escondido na 5ª seção. Bounce.<br>
+      <b>LP certa:</b> título "Avaliação + Raio-X sem Custo: agende em menos de 1 minuto", botão verde de WhatsApp acima
+      da dobra, e a mesma frase do anúncio. <b>Message match: a página abre exatamente onde o anúncio parou.</b></p>
+    </div>
+  </div>
+
+  <h3 id="m6-8"><span class="h3-num">6.8</span>Modelos de LP por nicho (blueprints)</h3>
+  <div class="tbl"><div class="tbl-in"><table>
+    <thead><tr><th>Nicho</th><th>Seções essenciais</th><th>Conversão-alvo inicial</th></tr></thead>
+    <tbody>
+      <tr><td><b>Clínica/Saúde</b></td><td>Hero avaliação → dores → como funciona (3 passos) → equipe com fotos → depoimentos → FAQ (dor, preço, convênio, local) → WhatsApp</td><td>8–15% (lead qualificado)</td></tr>
+      <tr><td><b>Restaurante/Delivery</b></td><td>Hero oferta do dia → fotos do produto (carrossel) → avaliações → como pedir (2 passos) → cupom da primeira compra → WhatsApp</td><td>10–20% (clique WhatsApp)</td></tr>
+      <tr><td><b>Imobiliária</b></td><td>Hero com tour → ficha do imóvel (fotos, planta, tabela de preço) → simulação de financiamento → depoimentos → formulário com 4 campos → FAQ</td><td>3–8% (lead)</td></tr>
+      <tr><td><b>E-commerce (produto)</b></td><td>Foto hero do produto → benefícios com ícones → vídeo demo → prova social com estrelas → oferta + frete → garantia → compra</td><td>2–4% (compra a frio)</td></tr>
+      <tr><td><b>B2B/Serviço</b></td><td>Hero com resultado numérico → casos numerados → método → quem é para (e para quem NÃO é) → formulário demo → materiais de apoio</td><td>2–6% (MQL)</td></tr>
+    </tbody>
+  </table></div></div>
+
+  <h3 id="m6-9"><span class="h3-num">6.9</span>Checklist de QA — 20 itens antes de publicar</h3>
+  <details class="acc"><summary>Estrutura e conteúdo (7)</summary><div class="acc-body"><ul>
+    <li>Título e CTA visíveis no primeiro scroll do celular</li>
+    <li>Mesma promessa do anúncio repetida no hero (message match)</li>
+    <li>CTA aparece ao menos 3 vezes na página</li>
+    <li>Depoimentos com nome/foto/resultados (sem estoque de fotos fakes)</li>
+    <li>FAQ cobre as objeções reais do atendimento atual</li>
+    <li>Ortografia revisada (erro de português mata confiança — leia em voz alta)</li>
+    <li>Política de privacidade + LGPD com link no rodapé</li>
+  </ul></div></details>
+  <details class="acc"><summary>Técnica e rastreamento (7)</summary><div class="acc-body"><ul>
+    <li>PageSpeed Insights mobile acima de ~70 e carregamento &lt; 3s</li>
+    <li>Página testada em iPhone + Android reais</li>
+    <li>Pixel da Meta + GA4 + tag do Google disparando (testar em tempo real)</li>
+    <li>Conversão disparando na página de obrigado / evento de submit</li>
+    <li>UTMs preservadas até a página de obrigado</li>
+    <li>Ícone/favicon + Open Graph (print do preview no WhatsApp)</li>
+    <li>Formulário enviado chega no e-mail/CRM (teste real com dados falsos)</li>
+  </ul></div></details>
+  <details class="acc"><summary>Botões, WhatsApp e confiança (6)</summary><div class="acc-body"><ul>
+    <li>Link wa.me com DDI+DDD+número e mensagem pré-preenchida</li>
+    <li>Barra fixa de CTA no mobile</li>
+    <li>Endereço, horário e CNPJ no rodapé (e Google Maps embutido se local)</li>
+    <li>Imagens com alt text e compressão WebP</li>
+    <li>Nenhum link quebrado (clicar em TUDO antes de aprovar)</li>
+    <li>Compartilhamento testado: WhatsApp, Instagram, e-mail</li>
+  </ul></div></details>
+
+  <h3 id="m6-10"><span class="h3-num">6.10</span>Os 5 erros que destroem conversão</h3>
+  <ol class="list ol">
+    <li><b>Menu completo do site na LP</b> — fuga em massa a cada link extra;</li>
+    <li><b>Slider de imagens automático</b> no hero — ninguém espera o 3º slide;</li>
+    <li><b>Formulário de 8 campos</b> para um lead de R$ 30;</li>
+    <li><b>Pop-up de "cadastre-se" 3 segundos</b> depois de chegar do anúncio;</li>
+    <li><b>Garantir escassez falsa</b> ("últimas vagas" há 6 meses) — o consumidor percebe e o reputacional é seu.</li>
+  </ol>
+
+  <div class="challenge">
+    <h4><span class="ch-tag">Prática</span>Desafio do Mentor — Módulo 06</h4>
+    <p class="ch-sub">Papel e caneta — ou direto no Módulo 7, onde você vai construí-la de verdade.</p>
+    <ol>
+      <li>Escolha um negócio real da sua cidade e desenhe a LP completa: título, subtítulo, 3 dores, oferta e CTA (por escrito, com limites de caracteres do anúncio que trará o tráfego).</li>
+      <li>Encontre 3 LPs reais de anúncios do seu feed e liste: promessa do anúncio × promessa do hero. Congruentes?</li>
+      <li>Um formulário caiu de 5 para 3 campos e a conversão subiu de 4% para 5,4%, com 2.000 visitas por braço. Calcule a significância (você já sabe como) e escreva o veredito em 2 linhas.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ MÓDULO 7 ============ -->
+<section class="module" id="m7" style="--acc:#a78bfa">
+  <div class="mod-head">
+    <div class="mod-ghost">07</div>
+    <span class="mod-kicker">Módulo 07 · IA na prática</span>
+    <h2>Vibe Coding: Landing Pages com z.ai (GLM-5.3)</h2>
+    <div class="mod-meta">
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>70 min</span>
+      <span>9 capítulos</span><span>Ferramenta: z.ai · modelo GLM-5.3 (atual, nov/2025)</span>
+    </div>
+    <div class="objectives">
+      <h4>Ao final deste módulo, você será capaz de:</h4>
+      <ul>
+        <li>Explicar o que é vibe coding e por que ele é vantagem competitiva para o gestor de tráfego</li>
+        <li>Escrever super-prompts de landing page com contexto, estrutura, copy e requisitos técnicos</li>
+        <li>Iterar com a IA (GLM-5.3) em mudanças atômicas até a página converter</li>
+        <li>Exigir da IA os requisitos técnicos de rastreamento, SEO e velocidade</li>
+        <li>Fechar o ciclo: gerar → revisar → deploy no GitHub Pages (Módulo 08)</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 id="m7-1"><span class="h3-num">7.1</span>O que é vibe coding (e por que você deve dominar isso)</h3>
+  <p><strong>Vibe coding</strong> é programar conversando: você descreve em linguagem natural o que quer e um modelo de
+  linguagem (aqui, o <strong>GLM-5.3 da Z.ai</strong>, modelo atual da plataforma z.ai) escreve o código — HTML, CSS e
+  JavaScript. O termo caiu no gosto do mercado em 2025 e virou habilidade profissional.</p>
+  <p>Para o gestor de tráfego, isso muda o jogo econômico: a LP deixou de ser gargalo de "orçamento de dev + 2 semanas de
+  fila" e passou a ser <strong>ativa de teste no mesmo dia</strong>. Quem testa página mais rápido que o concorrente,
+  converge mais barato — simples assim.</p>
+  <div class="callout mentor">
+    <div class="co-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.6.5 1 1.2 1 2v.5h6v-.5c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg></div>
+    <div class="co-body">
+      <div class="co-title">Dica do Mentor</div>
+      <p>Você não precisa saber escrever JavaScript do zero — precisa saber <b>julgar o resultado</b>: a página está
+      rápida? Responsiva? O Pixel dispara? É exatamente o checklist do módulo anterior. A IA escreve; o profissional
+      de tráfego audita. Domine o 6 e o 7 juntos.</p>
+    </div>
+  </div>
+
+  <h3 id="m7-2"><span class="h3-num">7.2</span>Seu kit de trabalho</h3>
+  <div class="grid g3">
+    <div class="card"><div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div class="c-t">Conta na z.ai</div><p>Crie sua conta em z.ai e acesse o chat. Selecione o modelo <b>GLM-5.3</b> — a versão atual para geração de código de qualidade.</p></div>
+    <div class="card"><div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div><div class="c-t">Conta GitHub</div><p>Grátis, em github.com. É onde a landing page vai morar e de onde o GitHub Pages serve o site (Módulo 08).</p></div>
+    <div class="card"><div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><div class="c-t">Token fine-grained</div><p>A "chave" que autoriza a IA a enviar arquivos para o SEU repositório de teste — com prazo e escopo limitados. Aprenda no Módulo 08.</p></div>
+  </div>
+
+  <h3 id="m7-3"><span class="h3-num">7.3</span>Anatomia do super-prompt</h3>
+  <p>A diferença entre uma LP meia-boca e uma LP profissional está na qualidade do pedido. Um super-prompt tem
+  <strong>6 blocos</strong> — memorize a estrutura:</p>
+  <div class="code">
+    <div class="code-head"><span class="code-file">super-prompt-base.txt — o esqueleto</span><button class="copy">Copiar</button></div>
+    <pre><code><span class="k">PAPEL</span>
+Você é um desenvolvedor front-end sênior especializado em landing pages
+de alta conversão para [país/idioma: português do Brasil].
+
+<span class="k">CONTEXTO</span>
+- Cliente: [tipo de negócio, cidade, diferencial]
+- Objetivo da página: [ação desejada: agendar / pedir / cadastrar]
+- Público-alvo: [idade, dor principal, objeção nº 1]
+- Oferta principal: [a oferta exata e a condição]
+
+<span class="k">ESTRUTURA</span>
+[Os blocos da anatomia do Módulo 06: hero, dor→solução, como funciona,
+prova social, oferta + urgência, FAQ, CTA final, rodapé LGPD]
+
+<span class="k">COPY</span>
+Escreva toda a copy em português do Brasil, tom [direto/acolhedor/técnico],
+com gatilhos de claridade. Nada de lorem ipsum.
+
+<span class="k">ESTILO</span>
+Paleta: [cores]. Tipografia: sans-serif moderna. Referência: [site que gosta].
+
+<span class="k">REQUISITOS TÉCNICOS (obrigatórios)</span>
+1. HTML + CSS + JS em arquivos separados, mobile-first, responsivo
+2. Botão WhatsApp: https://wa.me/55[DDDN]?text=[mensagem pré-preenchida]
+3. Meta tags: viewport, title SEO, description, Open Graph, favicon
+4. Imagens com alt e lazy loading (use https://placehold.co)
+5. Sem frameworks pesados: carregar em &lt; 3s no 4G
+6. Página obrigado.html separada (para rastrear a conversão)
+7. Espaço marcado no &lt;head&gt; para Pixel da Meta e GA4
+8. Acessibilidade: contraste AA, labels em campos, foco visível
+
+<span class="k">ENTREGA</span>
+Gere os arquivos completos (index.html, obrigado.html, styles.css, app.js)
+e um README.md com instruções de publicação.</code></pre>
+  </div>
+
+  <h3 id="m7-4"><span class="h3-num">7.4</span>O fluxo completo de trabalho (8 passos)</h3>
+  <ol class="steps">
+    <li><span class="s-num">01</span><div><h4>Brief no papel</h4><p>Preencha o super-prompt com dados reais do negócio. Oferta concreta &gt; qualquer design bonito.</p></div></li>
+    <li><span class="s-num">02</span><div><h4>Geração</h4><p>Cole o super-prompt na z.ai com o GLM-5.3 e deixe a mágica acontecer. Peça arquivos separados — facilita manutenção futura.</p></div></li>
+    <li><span class="s-num">03</span><div><h4>Revisão no preview</h4><p>Abra o resultado. Compare bloco a bloco com a anatomia do Módulo 06: falta prova social? O FAQ cobre as objeções reais?</p></div></li>
+    <li><span class="s-num">04</span><div><h4>Iteração atômica</h4><p>Peça UMA mudança por vez (banco de prompts no 7.6). "Mantenha todo o resto e altere apenas X" — a frase mágica.</p></div></li>
+    <li><span class="s-num">05</span><div><h4>Rastreamento</h4><p>Passe as snippets do Pixel da Meta e do GA4 e peça para injetar no head + evento de conversão no clique/botão e na obrigado.html.</p></div></li>
+    <li><span class="s-num">06</span><div><h4>QA físico</h4><p>Abra no seu celular. Rode o checklist de 20 itens do Módulo 06. A IA não testa — você testa.</p></div></li>
+    <li><span class="s-num">07</span><div><h4>Deploy</h4><p>Com o token fine-grained, o próprio agente cria o repositório, envia os arquivos e ativa o GitHub Pages (Módulo 08).</p></div></li>
+    <li><span class="s-num">08</span><div><h4>Medir e iterar</h4><p>GA4 em tempo real nos primeiros acessos; depois, os dados mandam no backlog de testes (Módulo 05). O ciclo recomeça.</p></div></li>
+  </ol>
+
+  <h3 id="m7-5"><span class="h3-num">7.5</span>Biblioteca de prompts prontos por nicho</h3>
+  <p>Copie, preencha os colchetes e envie. Estes três cobrem 80% dos pedidos de clientes locais:</p>
+
+  <details class="acc"><summary>Prompt 1 — Clínica / serviço de saúde (captura de agendamento)</summary><div class="acc-body">
+    <div class="code"><div class="code-head"><span class="code-file">prompt-clinica.txt</span><button class="copy">Copiar</button></div>
+    <pre><code>Você é desenvolvedor front-end sênior especialista em landing pages
+de alta conversão. Crie uma landing page com os arquivos index.html,
+obrigado.html, styles.css e app.js.
+
+CONTEXTO: clínica de [especialidade] em [cidade]. Objetivo: agendamentos
+de avaliação. Público: adultos 30–55 anos, medo de preço e de procedimento.
+OFERTA: avaliação + [exame] sem custo agendando até [data].
+
+ESTRUTURA: hero com título 4U + subtítulo + botão verde WhatsApp;
+3 dores em cards; como funciona em 3 passos; equipe com fotos
+(placehold.co); 3 depoimentos com nome e resultado; bloco de oferta
+com contador para [data]; FAQ com 6 perguntas (preço, convênio, dor,
+localização, experiência, agendamento); CTA final; rodapé com endereço,
+CNPJ e link de política de privacidade (LGPD).
+
+COPY: português do Brasil, tom acolhedor e direto, sem jargão clínico
+e SEM promessa de resultado médico (compliance).
+
+ESTILO: paleta [azul-petróleo + branco + verde CTA], títulos Sora ou
+similar, muito espaço em branco.
+
+TÉCNICO: mobile-first; botão WhatsApp wa.me/55[DDDN]?text=[mensagem];
+barra fixa de CTA após 40% de rolagem no mobile; imagens WebP com alt
+e lazy; meta tags completas + Open Graph; comentário no &lt;head&gt; marcando
+onde colar Pixel e GA4; evento de conversão na obrigado.html;
+contraste AA; &lt; 3s de carregamento sem frameworks.</code></pre></div>
+  </div></details>
+
+  <details class="acc"><summary>Prompt 2 — Restaurante / delivery local (venda direta)</summary><div class="acc-body">
+    <div class="code"><div class="code-head"><span class="code-file">prompt-restaurante.txt</span><button class="copy">Copiar</button></div>
+    <pre><code>Você é desenvolvedor front-end sênior especialista em páginas de
+venda direta para food service. Crie index.html, obrigado.html,
+styles.css e app.js.
+
+CONTEXTO: [tipo de comida] com entrega em [bairro/cidade] em até 30 min.
+Público: famílias e trabalhadores locais, 25–55, pedem pelo celular.
+OFERTA: [combo/produto destaque] por [preço] com [brinde/desconto] na
+primeira compra pelo site.
+
+ESTRUTURA: hero com foto grande do produto + oferta + botão "Pedir no
+WhatsApp"; carrossel de fotos; 3 cards (tempo de entrega, pagamento na
+entrega, avaliação 4,9); como pedir em 2 passos; depoimentos curtos;
+mapa da área de entrega; FAQ (tempo, formas de pagamento, área, horário);
+CTA fixo no mobile; rodapé com endereço e CNPJ.
+
+COPY: português do Brasil, apetitoso e objetivo, frases curtas,
+preços sempre visíveis.
+
+ESTILO: paleta quente ([laranja/marrom]), fotos em destaque, botão de
+WhatsApp verde chamativo.
+
+TÉCNICO: mobile-first absoluto (90% do tráfego é celular); wa.me com
+pedido pré-preenchido ("Olá! Quero pedir o [combo]"); imagens otimizadas
+com alt; meta tags + Open Graph caprichado (o preview no WhatsApp vende);
+espaço marcado para Pixel/GA4; sem frameworks.</code></pre></div>
+  </div></details>
+
+  <details class="acc"><summary>Prompt 3 — E-commerce de produto único (conversão fria)</summary><div class="acc-body">
+    <div class="code"><div class="code-head"><span class="code-file">prompt-ecommerce.txt</span><button class="copy">Copiar</button></div>
+    <pre><code>Você é desenvolvedor front-end sênior especialista em páginas de
+produto único (estilo "oferta direta"). Crie index.html, obrigado.html,
+styles.css e app.js.
+
+CONTEXTO: venda de [produto] para [público e dor]. Ticket: R$ [preço]
+com frete grátis acima de R$ [valor]. Objetivo: compra a frio via
+tráfego pago (Meta Ads + Google Shopping).
+
+ESTRUTURA: hero com foto do produto + headline de benefício + botão
+"Comprar agora"; 4 benefícios com ícones; galeria de fotos; vídeo demo
+(espaço reservado); prova social com estrelas e depoimentos com foto;
+bloco de oferta com âncora de preço (de R$ X por R$ Y) e garantia de
+7 dias; FAQ de objeções (tamanho, entrega, troca, pagamento); botão de
+compra repetido 4 vezes; rodapé com CNPJ, contato e política.
+
+COPY: português do Brasil, foco em benefício (não em característica),
+urgência real.
+
+ESTILO: paleta sóbria com 1 cor de ação para o botão; hierarquia visual
+agressiva no preço/oferta.
+
+TÉCNICO: mobile-first; imagens WebP lazy com alt; microanimações leves
+(respeitando prefers-reduced-motion); espaço para Pixel da Meta com
+eventos ViewContent e AddToCart no clique do botão; GA4 com evento
+purchase na obrigado.html; meta tags + Open Graph; &lt; 3s no 4G.</code></pre></div>
+  </div></details>
+
+  <h3 id="m7-6"><span class="h3-num">7.6</span>Banco de prompts de refinamento</h3>
+  <div class="code">
+    <div class="code-head"><span class="code-file">refinamentos.txt — um por vez, sempre "mantenha o resto"</span><button class="copy">Copiar</button></div>
+    <pre><code>1. Mantenha todo o resto e deixe o título do hero 30% maior, com
+   [palavra-chave] em destaque colorido.
+2. Troque a paleta para [cores] mantendo contraste AA.
+3. Adicione barra fixa de CTA no mobile, visível após 40% de rolagem.
+4. Reduza o formulário para Nome e WhatsApp e deixe o botão maior.
+5. Injete este Pixel da Meta no &lt;head&gt; e dispare evento Lead no
+   envio do formulário e na obrigado.html: [cole a snippet]
+6. Instale o GA4 (ID G-XXXXXXX) e marque key event na obrigado.html.
+7. Compacte imagens para WebP e adicione lazy loading + alt descritivo.
+8. Adicione FAQ em &lt;details&gt; com animação suave de abertura.
+9. Crie og:title, og:description e og:image para o preview no WhatsApp.
+10. Gere README.md com instruções de deploy no GitHub Pages.
+
+<span class="cm"># Regra de ouro da iteração: UMA mudança por mensagem.
+# Assim você sempre sabe o que causou qual efeito — mesmo espírito
+# do teste A/B do Módulo 05.</span></code></pre>
+  </div>
+
+  <h3 id="m7-7"><span class="h3-num">7.7</span>O checklist técnico que você EXIGE da IA</h3>
+  <ul class="list">
+    <li><b>Meta viewport</b> presente (sem ela, mobile quebrado);</li>
+    <li><b>Arquivos separados</b> (index/styles/app) — uma página de 3.000 linhas num arquivo só é dor de manutenção;</li>
+    <li><b>wa.me correto:</b> 55 + DDD + número, com texto pré-preenchido URL-encoded;</li>
+    <li><b>obrigado.html</b> separada e <b>evento de conversão</b> nela — é daí que o GA4/Gerenciador contam;</li>
+    <li><b>Espaço marcado</b> para Pixel e GA4 (comentário no head) até você colar as snippets reais;</li>
+    <li><b>Alt em imagens, lazy loading, WebP</b>;</li>
+    <li><b>Open Graph completo</b> — preview bonito no WhatsApp é conversão invisível;</li>
+    <li><b>prefers-reduced-motion respeitado</b> em animações (acessibilidade);</li>
+    <li><b>Nenhum dado sensível hard-coded</b> (senhas, chaves de API — nada disso em código de front);</li>
+    <li><b>Sem CDN de framework pesado</b> — HTML/CSS/JS puro carrega a landing page mais rápido.</li>
+  </ul>
+
+  <h3 id="m7-8"><span class="h3-num">7.8</span>Iteração orientada a dados</h3>
+  <p>A LP no ar é o começo, não o fim. O ciclo profissional: <strong>GA4 mostra onde o usuário abandona → você pede à
+  IA a mudança específica → sobe a nova versão → o Módulo 05 confirma se melhorou</strong>. Exemplos de pedidos
+  orientados por dado:</p>
+  <ul class="list">
+    <li>"75% sai antes do formulário" → "traga o formulário para cima, logo após o hero";</li>
+    <li>"Muito tráfego Instagram mobile" → "otimize o primeiro load: reduzir CSS crítico e imagens hero para 100KB";</li>
+    <li>"WhatsApp clicado mas sem conversa" → "mude o texto pré-preenchido para oferecer o próximo passo direto".</li>
+  </ul>
+
+  <h3 id="m7-9"><span class="h3-num">7.9</span>Boas práticas, limites e responsabilidade</h3>
+  <ul class="list">
+    <li><b>Leia o código gerado</b> ao menos por cima — você é o responsável técnico pelo que publica;</li>
+    <li><b>Nunca publique dados de clientes</b> (planilhas, senhas, tokens) em repositórios — nem em páginas estáticas;</li>
+    <li><b>Direitos autorais:</b> peça imagens de bancos livres ou placeholders; a IA não pode "gerar" o logo do cliente;</li>
+    <li><b>Revisão humana de copy:</b> a IA escreve bem, mas promessas de saúde/finanças precisam do seu filtro de compliance (Módulo 3.10);</li>
+    <li><b>Versione:</b> cada iteração relevante = um commit no GitHub (próximo módulo) — seu histórico vira portfólio.</li>
+  </ul>
+
+  <div class="challenge">
+    <h4><span class="ch-tag">Prática</span>Desafio do Mentor — Módulo 07</h4>
+    <p class="ch-sub">Ao final deste desafio você terá a primeira peça do seu portfólio no ar.</p>
+    <ol>
+      <li>Preencha o super-prompt com um negócio real da sua cidade e gere a LP completa na z.ai com o GLM-5.3.</li>
+      <li>Aplique 5 refinamentos do banco de prompts (um por vez) e anote o que mudou a cada passo.</li>
+      <li>Rode o checklist de QA do Módulo 06 e liste os ajustes que precisou pedir à IA.</li>
+      <li>Guarde os arquivos — no próximo módulo eles vão para o ar com domínio grátis do GitHub Pages.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ MÓDULO 8 ============ -->
+<section class="module" id="m8" style="--acc:#3fb950">
+  <div class="mod-head">
+    <div class="mod-ghost">08</div>
+    <span class="mod-kicker">Módulo 08 · Deploy</span>
+    <h2>GitHub, Token Fine-Grained &amp; Hospedagem Grátis</h2>
+    <div class="mod-meta">
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>80 min</span>
+      <span>10 capítulos</span><span>Resultado: site no ar em https://SEU-USUARIO.github.io/repo</span>
+    </div>
+    <div class="objectives">
+      <h4>Ao final deste módulo, você será capaz de:</h4>
+      <ul>
+        <li>Criar conta GitHub e repositório de teste públicos com a estrutura correta</li>
+        <li>Gerar um Personal Access Token <b>fine-grained</b> com escopo mínimo e prazo de validade</li>
+        <li>Conectar o token ao agente de IA (z.ai) para que ELE faça commit, push e ativação do Pages</li>
+        <li>Revogar, rotacionar e auditar tokens — a higiene que separa o profissional do amador</li>
+        <li>Atualizar e republicar a landing page a qualquer momento, de graça</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 id="m8-1"><span class="h3-num">8.1</span>GitHub em 4 minutos (só o que você precisa)</h3>
+  <div class="grid g2">
+    <div class="card"><div class="c-t">Os 5 conceitos</div><p><b>Repositório (repo):</b> a pasta do projeto no GitHub. <b>Commit:</b> um pacote de mudanças salvas com mensagem. <b>Branch:</b> linha de versão (a principal se chama <b>main</b>). <b>Push:</b> enviar commits para o GitHub. <b>GitHub Pages:</b> serviço que transforma o repositório em site público.</p></div>
+    <div class="card"><div class="c-t">O plano gratuito serve</div><p>Repositórios públicos + GitHub Pages são <b>grátis</b>. Para hospedar de graça, o repositório precisa ser <b>público</b> — landing pages são públicas por natureza, então zero problema. Domínio próprio é opcional e pode ser ligado depois.</p></div>
+  </div>
+  <div class="callout mentor">
+    <div class="co-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.6.5 1 1.2 1 2v.5h6v-.5c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg></div>
+    <div class="co-body">
+      <div class="co-title">Dica do Mentor</div>
+      <p>Esta apostila inteira — o site que você está lendo agora — foi construída exatamente com o fluxo deste módulo:
+      IA gera o código, token fine-grained autoriza, GitHub Pages publica. Você vai replicar o processo hoje.</p>
+    </div>
+  </div>
+
+  <h3 id="m8-2"><span class="h3-num">8.2</span>Criando a conta e o repositório de teste</h3>
+  <ol class="steps">
+    <li><span class="s-num">01</span><div><h4>Conta</h4><p>Acesse <b>github.com</b> → Sign up → e-mail, senha, verificação. Guarde o username: ele vira parte da URL do seu site (github.com/<b>SEU-USUARIO</b>).</p></div></li>
+    <li><span class="s-num">02</span><div><h4>Novo repositório</h4><p>Clique no + (canto superior direito) → <b>New repository</b>. Nome sugerido: <span class="tag">lp-teste-SEU-NOME</span> (um repo por landing page facilita a vida e a segurança).</p></div></li>
+    <li><span class="s-num">03</span><div><h4>Configuração correta</h4><p>Visibilidade: <b>Public</b> (necessário para o Pages gratuito). Marque <b>"Add a README"</b>. Ignore .gitignore e licença por ora. → <b>Create repository</b>.</p></div></li>
+    <li><span class="s-num">04</span><div><h4>Regra do sandbox</h4><p>Este repositório é o seu <b>ambiente de teste</b>: o token de IA vai apontar SÓ para ele. Nada de dados sensíveis aqui — é espaço público de experimentação.</p></div></li>
+  </ol>
+
+  <h3 id="m8-3"><span class="h3-num">8.3</span>Token fine-grained: o passo mais importante do módulo</h3>
+  <p>O token é a <strong>chave</strong> que autoriza o agente de IA a enviar arquivos para o seu repositório. A regra
+  profissional: <strong>sempre fine-grained (detalhado), nunca o token clássico</strong> — o fine-grained permite
+  escolher <strong>exatamente quais repositórios</strong> e <strong>quais permissões</strong> o token tem, e quando ele
+  expira. É a diferença entre entregar a chave do portão e a chave do apartamento inteiro.</p>
+  <ol class="steps">
+    <li><span class="s-num">01</span><div><h4>Abra o caminho</h4><p>No GitHub, clique na sua foto (canto superior direito) → <b>Settings</b> → roda até <b>Developer settings</b> (última seção da esquerda) → <b>Personal access tokens</b> → <b>Fine-grained tokens</b> → botão <b>Generate new token</b>.</p></div></li>
+    <li><span class="s-num">02</span><div><h4>Nomeie com intenção</h4><p><b>Token name:</b> algo auditável depois, ex.: <span class="tag">zai-deploy-lp-teste</span>. O nome aparece no histórico de uso — "token-1" é dívida técnica.</p></div></li>
+    <li><span class="s-num">03</span><div><h4>Expiration: curto por padrão</h4><p>Escolha <b>7 days</b> (ou 30 se for trabalhar a semana toda). Token sem expiração é chave embaixo do capacho. Você pode gerar outro em 30 segundos quando precisar.</p></div></li>
+    <li><span class="s-num">04</span><div><h4>Resource owner: você</h4><p>Confirme que o dono do recurso é o <b>seu usuário</b> (a não ser que a agência tenha uma organização e você tenha permissão lá).</p></div></li>
+    <li><span class="s-num">05</span><div><h4>Repository access: "Only select repositories"</h4><p>Selecione <b>apenas</b> o <span class="tag">lp-teste-SEU-NOME</span>. É aqui que o fine-grained brilha: mesmo que o token vaze, ele não alcança nenhum outro projeto seu.</p></div></li>
+    <li><span class="s-num">06</span><div><h4>Permissions: o mínimo suficiente</h4><p>Em <b>Repository permissions</b>, procure e ajuste: <b>Contents → Read and write</b> (para a IA enviar os arquivos) e <b>Pages → Read and write</b> (para a IA ativar o Pages via API). Deixe tudo o mais em <b>No access</b> — a permissão <b>Metadata</b> (somente leitura) é adicionada automaticamente e normal.</p></div></li>
+    <li><span class="s-num">07</span><div><h4>Generate e copie UMA vez</h4><p>Clique em <b>Generate token</b> e copie o código (começa com <span class="tag">github_pat_</span>). O GitHub <b>não mostra mais depois</b> de você fechar a página — por isso copie na hora e cole no destino certo. Quem tem o token tem o acesso; trate-o como senha.</p></div></li>
+  </ol>
+  <div class="callout warn">
+    <div class="co-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0zM12 9v4M12 17h.01"/></svg></div>
+    <div class="co-body">
+      <div class="co-title">Atenção — as 3 regras invioláveis</div>
+      <p>1) <b>Nunca</b> cole o token em conversa pública, print, e-mail ou no meio do código-fonte.<br>
+      2) <b>Nunca</b> use token clássico ("Tokens classic") com escopo total de repo para esse trabalho — fine-grained existe exatamente para isso.<br>
+      3) <b>Nunca</b> dê ao token mais permissões/repos do que a tarefa exige. Sobrou permissão = risco de graça.</p>
+    </div>
+  </div>
+
+  <h3 id="m8-4"><span class="h3-num">8.4</span>Entregando o token ao agente (o site que se auto-publica)</h3>
+  <p>No chat da z.ai, quando pedir o deploy, forneça o token <strong>na conversa privada com o seu agente</strong>
+  (nunca em canal público) junto com o nome do repositório. O agente executa por baixo dos panos o que um dev faria:</p>
+  <div class="code">
+    <div class="code-head"><span class="code-file">o-que-o-agente-executa.txt — referência (você não digita isso)</span><button class="copy">Copiar</button></div>
+    <pre><code><span class="cm"># 1. Clonar o repositório de teste usando o token como credencial:</span>
+git clone https://github.com/SEU-USUARIO/lp-teste-seu-nome.git
+
+<span class="cm"># 2. Colocar os arquivos gerados (index.html, styles.css, app.js...)</span>
+
+<span class="cm"># 3. Registrar versão e enviar:</span>
+git add .
+git commit -m "feat: landing page inicial"
+git push origin main
+
+<span class="cm"># 4. Ativar o GitHub Pages apontando para a branch main:</span>
+curl -X POST \
+  -H "Authorization: Bearer SEU_TOKEN" \
+  -H "Accept: application/vnd.github+json" \
+  https://api.github.com/repos/SEU-USUARIO/lp-teste-seu-nome/pages \
+  -d '{"source":{"branch":"main","path":"/"}}'</code></pre>
+  </div>
+  <p>O prompt que você envia é muito mais simples que os comandos:</p>
+  <div class="code">
+    <div class="code-head"><span class="code-file">prompt-deploy.txt</span><button class="copy">Copiar</button></div>
+    <pre><code>Faça o deploy desta landing page no meu GitHub:
+
+- Usuário: SEU-USUARIO
+- Repositório: lp-teste-seu-nome
+- Token (fine-grained, só este repo): github_pat_...
+
+Passos: clone o repositório, adicione os arquivos da landing page,
+faça commit e push na branch main, depois ative o GitHub Pages
+servindo a raiz da branch main via API. Ao final, me entregue a URL
+pública do site.</code></pre>
+  </div>
+
+  <h3 id="m8-5"><span class="h3-num">8.5</span>Ativando o GitHub Pages na mão (plan B)</h3>
+  <p>Se preferir não dar o token (ou ele já expirou), a ativação manual leva 40 segundos:</p>
+  <ol class="list ol">
+    <li>Abra o repositório → aba <b>Settings</b> → menu <b>Pages</b>;</li>
+    <li>Em "Build and deployment" → <b>Source: Deploy from a branch</b>;</li>
+    <li><b>Branch: main</b> → pasta <b>/ (root)</b> → <b>Save</b>;</li>
+    <li>Aguarde 1–2 minutos (a primeira build demora um pouco mais) e acesse:<br>
+    <span class="tag">https://SEU-USUARIO.github.io/lp-teste-seu-nome/</span></li>
+  </ol>
+  <p>Requisitos para funcionar: um arquivo <span class="tag">index.html</span> na raiz do repo. Dica avançada: inclua
+  um arquivo <span class="tag">.nojekyll</span> vazio para o GitHub servir os arquivos exatamente como estão.</p>
+
+  <h3 id="m8-6"><span class="h3-num">8.6</span>Segurança de token: as 8 regras de ouro</h3>
+  <ol class="list ol">
+    <li><b>Fine-grained sempre</b> — repo específico, permissões específicas, prazo específico;</li>
+    <li><b>1 token = 1 finalidade</b> — deploy da LP de teste? Token para aquele repo e nada mais;</li>
+    <li><b>Prazo curto</b> — 7 dias para tarefas, 30 no máximo para projetos contínuos;</li>
+    <li><b>Nunca no código</b> — token em arquivo versionado vaza para o mundo (repositórios públicos são indexados por bots em minutos);</li>
+    <li><b>Nunca em print/grupo</b> — o print de ontem vaza hoje; o grupo de 50 pessoas tem 50 riscos;</li>
+    <li><b>Revogue ao terminar</b> (próximo capítulo) — token parado é passivo;</li>
+    <li><b>Audite o uso</b> — na página do token, o GitHub mostra "Last used" e os repositórios acessados. Uso em repo que você não reconhece = revoke imediato;</li>
+    <li><b>Vazou? Revoke e gira</b> — a resposta a qualquer suspeita é sempre a mesma: deletar o token e gerar outro. Leva 30 segundos e zera o problema.</li>
+  </ol>
+
+  <h3 id="m8-7"><span class="h3-num">8.7</span>Revogando o token (faça agora, como treino)</h3>
+  <ol class="steps">
+    <li><span class="s-num">01</span><div><h4>Volte ao painel</h4><p>Foto → <b>Settings</b> → <b>Developer settings</b> → <b>Personal access tokens</b> → <b>Fine-grained tokens</b>.</p></div></li>
+    <li><span class="s-num">02</span><div><h4>Revise o histórico</h4><p>Clique no token → confira "Last used within" e os repositórios no log de acesso. Reconhece tudo? Ótimo.</p></div></li>
+    <li><span class="s-num">03</span><div><h4>Delete</h4><p><b>Delete</b> → confirme. Pronto: aquele token morreu para o mundo, inclusive para quem o tinha.</p></div></li>
+    <li><span class="s-num">04</span><div><h4>Regenerar quando precisar</h4><p>Da próxima vez que for fazer deploy, gere um token novo com o mesmo procedimento de 2 minutos. O atrito de 2 minutos é o seguro da sua conta.</p></div></li>
+  </ol>
+  <div class="callout mentor">
+    <div class="co-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.6.5 1 1.2 1 2v.5h6v-.5c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg></div>
+    <div class="co-body">
+      <div class="co-title">Dica do Mentor — o hábito que impressiona em entrevista</div>
+      <p>Faça do ciclo <b>gerar → usar → revogar</b> um hábito muscular. Em agência, você vai mexer com tokens de
+      cliente, deploy automatizado e contas de anúncio de terceiros. Quem demonstra higiene de credenciais no
+      portfólio transmite exatamente a maturidade que o cargo de gestor exige.</p>
+    </div>
+  </div>
+
+  <h3 id="m8-8"><span class="h3-num">8.8</span>A anatomia do projeto publicado</h3>
+  <div class="code">
+    <div class="code-head"><span class="code-file">estrutura-do-repo.txt</span><button class="copy">Copiar</button></div>
+    <pre><code>lp-teste-seu-nome/
+├── index.html      <span class="cm"># a landing page</span>
+├── obrigado.html   <span class="cm"># página de conversão (rastreamento)</span>
+├── styles.css      <span class="cm"># estilos</span>
+├── app.js          <span class="cm"># interações (menu, envio, eventos)</span>
+├── favicon.svg     <span class="cm"># ícone da aba</span>
+├── .nojekyll       <span class="cm"># serve os arquivos como estão</span>
+└── README.md       <span class="cm"># descreve o projeto (portfólio!)</span></code></pre>
+  </div>
+  <p>O README merece capricho: 5 linhas sobre o cliente fictício/real, o objetivo da página e um print. Recrutadores
+  clicam no seu GitHub a partir do currículo — README bonito é primeira impressão que fala por você.</p>
+
+  <h3 id="m8-9"><span class="h3-num">8.9</span>Atualizando o site depois de publicar</h3>
+  <p>Pediu uma mudança à IA? O re-deploy é um push: o agente (ou você, via upload manual do arquivo no GitHub — botão
+  "Add file → Upload files") atualiza a <span class="tag">main</span>, o GitHub Pages reconstrói sozinho em segundos e
+  o site atualiza. Guarde a versão anterior via commit — o histórico é seu desfazer universal.</p>
+
+  <h3 id="m8-10"><span class="h3-num">8.10</span>Plano C: publicar sem token nenhum</h3>
+  <p>Para alunos que preferem zero automação: no repositório → <b>Add file → Upload files</b> → arraste
+  <span class="tag">index.html</span>, <span class="tag">styles.css</span> e <span class="tag">app.js</span> →
+  <b>Commit changes</b>. O Pages (se já ativado no 8.5) publica na hora. Mais lento no dia a dia, mas o caminho existe
+  — e é útil para entender o que o agente automatiza.</p>
+
+  <div class="challenge">
+    <h4><span class="ch-tag">Prática</span>Desafio do Mentor — Módulo 08</h4>
+    <p class="ch-sub">O rito de passagem desta mentoria: sua primeira LP no ar.</p>
+    <ol>
+      <li>Crie o repositório de teste e publique a LP do Desafio 07 com o fluxo completo (token → agente → Pages).</li>
+      <li>Envie a URL pública para 3 pessoas e monitore o tempo real do GA4 — veja as visitas chegando.</li>
+      <li>Revogue o token usado. Depois, gere um novo, faça uma alteração qualquer na LP, re-deploy e revogue de novo (treino do hábito).</li>
+      <li>Documente no README: objetivo, stack, data e o que você faria de teste A/B primeiro.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ MÓDULO 9 ============ -->
+<section class="module" id="m9" style="--acc:#fbbf24">
+  <div class="mod-head">
+    <div class="mod-ghost">09</div>
+    <span class="mod-kicker">Módulo 09 · Vendas</span>
+    <h2>Playbooks por Tipo de Estabelecimento</h2>
+    <div class="mod-meta">
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>90 min</span>
+      <span>8 capítulos</span><span>Do restaurante ao infoproduto: como vender para todos</span>
+    </div>
+    <div class="objectives">
+      <h4>Ao final deste módulo, você será capaz de:</h4>
+      <ul>
+        <li>Diagnosticar qualquer estabelecimento em 5 perguntas e escolher a estrutura certa de campanhas</li>
+        <li>Aplicar o playbook completo de 6 segmentos: local, clínica, e-commerce, imóveis, B2B e infoprodutos</li>
+        <li>Definir verba inicial, KPIs e expectativas realistas por segmento</li>
+        <li>Escrever anúncios e LPs no padrão de cada nicho</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 id="m9-1"><span class="h3-num">9.1</span>O diagnóstico de 5 perguntas (vale para qualquer cliente)</h3>
+  <p>Antes de qualquer promessa, sente com o dono e responda — com ele — este roteiro:</p>
+  <div class="tbl"><div class="tbl-in"><table>
+    <thead><tr><th>Pergunta</th><th>O que ela define</th></tr></thead>
+    <tbody>
+      <tr><td><b>1. Qual o ticket médio e a margem?</b></td><td>Quanto você pode pagar por venda/lead (Módulo 1.3)</td></tr>
+      <tr><td><b>2. A receita é recorrente ou pontual?</b></td><td>LTV alto per CPA alto; venda única exige CPA apertado</td></tr>
+      <tr><td><b>3. Qual a capacidade de atendimento?</b></td><td>Verba acima da capacidade desperdiça (clínica lotada não precisa de mais lead, precisa de no-show)</td></tr>
+      <tr><td><b>4. Existe demanda de busca pelo serviço?</b></td><td>Tem procura ativa no Google? Search primeiro. Não tem? Meta cria a demanda</td></tr>
+      <tr><td><b>5. Quais dados já existem?</b></td><td>Base de clientes, histórico, avaliações — alimentam semelhantes, CAPI e copy</td></tr>
+    </tbody>
+  </table></div></div>
+
+  <h3 id="m9-2"><span class="h3-num">9.2</span>Negócios locais: restaurante, salão, barbearia, oficina</h3>
+  <div class="tbl"><div class="tbl-in"><table>
+    <thead><tr><th>Elemento</th><th>Playbook</th></tr></thead>
+    <tbody>
+      <tr><td><b>Canais</b></td><td>Google Search (raio de 3–8 km) + Perfil da Empresa impecável + Meta click-to-WhatsApp</td></tr>
+      <tr><td><b>Estrutura Google</b></td><td>1 campanha Search por serviço principal + negativas + recursos de chamada e local; formulário de lead para orçamento</td></tr>
+      <tr><td><b>Estrutura Meta</b></td><td>1 campanha de Tráfego → WhatsApp (frio, geo) + 1 remarketing de quem conversou/visitou</td></tr>
+      <tr><td><b>Verba inicial</b></td><td>R$ 1.500–3.000/mês (60% Google, 40% Meta)</td></tr>
+      <tr><td><b>KPIs</b></td><td>Custo por conversa de WhatsApp, custo por ligação, pedidos/mês atribuídos</td></tr>
+    </tbody>
+  </table></div></div>
+  <div class="code">
+    <div class="code-head"><span class="code-file">exemplo-rsa-restaurante.txt</span><button class="copy">Copiar</button></div>
+    <pre><code><span class="cm"># RSA para pizzaria — respeitando limites (títulos 30 / descrições 90):</span>
+Títulos:
+  Pizza em 30 min na Sua Casa
+  Delivery Grátis no Centro
+  Peça pelo WhatsApp Agora
+  30% Off na Primeira Pizza
+  Massa de Fermentação Natural
+Descrições:
+  Massa artesanal e entrega em até 30 minutos no seu endereço.
+  Peça pelo WhatsApp e leve 30% de desconto na primeira compra.
+  Avaliação 4,9 com mais de 800 pedidos entregues no bairro.</code></pre>
+  </div>
+  <p><b>Erros clássicos do nicho:</b> segmentar "pessoas que gostam de pizza" na Meta (todo mundo gosta — segmente por
+  geo + comportamento), esquecer o Perfil da Empresa (metade das buscas locais acabam no Maps) e não medir pedido
+  originado (pergunte "como nos achou?" no WhatsApp e some na planilha).</p>
+
+  <h3 id="m9-3"><span class="h3-num">9.3</span>Clínicas e consultórios</h3>
+  <div class="tbl"><div class="tbl-in"><table>
+    <thead><tr><th>Elemento</th><th>Playbook</th></tr></thead>
+    <tbody>
+      <tr><td><b>Canais</b></td><td>Google Search BOFU (ex.: "implante dentário preço") + Meta para reputação e leads complementares</td></tr>
+      <tr><td><b>Estrutura Google</b></td><td>Grupos por tratamento, LP por tratamento, negativas de "grátis/concurso", formulário + chamada como conversões</td></tr>
+      <tr><td><b>Estrutura Meta</b></td><td>Vendas/Leads com criativo educativo + remarketing; evitar promessa médica (3.10)</td></tr>
+      <tr><td><b>Verba inicial</b></td><td>R$ 2.000–4.000/mês</td></tr>
+      <tr><td><b>KPIs</b></td><td>CPL, custo por consulta comparecida, taxa de conversão lead→tratamento</td></tr>
+    </tbody>
+  </table></div></div>
+  <div class="callout mentor">
+    <div class="co-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.6.5 1 1.2 1 2v.5h6v-.5c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg></div>
+    <div class="co-body">
+      <div class="co-title">Dica do Mentor — o diferencial é o funil de atendimento</div>
+      <p>Em saúde, o gestor de tráfego entrega o lead; quem converte é a secretaria. Contrato bom prevê:
+      <b>resposta em menos de 5 minutos</b>, confirmação 24h antes e follow-up de 3 toques para quem não compareceu.
+      Sem isso, você paga caro por leads que morrem na recepção — e a culpa cai no tráfego.</p>
+    </div>
+  </div>
+
+  <h3 id="m9-4"><span class="h3-num">9.4</span>E-commerce</h3>
+  <div class="tbl"><div class="tbl-in"><table>
+    <thead><tr><th>Elemento</th><th>Playbook</th></tr></thead>
+    <tbody>
+      <tr><td><b>Canais</b></td><td>Google PMax + Merchant Center Next · Meta Vendas Advantage+ com catálogo</td></tr>
+      <tr><td><b>Estrutura Google</b></td><td>PMax por linha de produto + Search de marca + feed impecável (título, GTIN, preço, imagem)</td></tr>
+      <tr><td><b>Estrutura Meta</b></td><td>Campanha Advantage+ (frio) + remarketing dinâmico de carrinho (catálogo)</td></tr>
+      <tr><td><b>Verba inicial</b></td><td>R$ 5.000+/mês (menos que isso, foque em 1 categoria)</td></tr>
+      <tr><td><b>KPIs</b></td><td>ROAS (meta = 2 a 3× o break-even), CPA, taxa de recompra, valor médio</td></tr>
+    </tbody>
+  </table></div></div>
+  <p><b>Sazonalidade é lei:</b> o ano do e-commerce se planeja de Black Friday a Black Friday. Comece a aquecer
+  públicos e testar criativos 6–8 semanas antes; na semana, defenda a marca no Search (concorrente vai leiloar o seu
+  nome) e prepare a LP de oferta com PageSpeed revisado para o pico de tráfego.</p>
+
+  <h3 id="m9-5"><span class="h3-num">9.5</span>Imobiliárias e altos tickets</h3>
+  <ul class="list">
+    <li><b>Estrutura:</b> Search por empreendimento/bairro ("apartamento 2 quartos [bairro]") + Meta Leads com criativo de tour para frio + remarketing por imóvel visto;</li>
+    <li><b>Lead ≠ venda:</b> o ciclo vai de 30 a 180 dias — configure janela de conversão de 90 dias e bata ponto com o CRM: lead qualificado (renda + financiamento) vale 5× o lead cru;</li>
+    <li><b>Verba:</b> R$ 3.000–8.000/mês; KPI: custo por lead qualificado e custo por visita agendada;</li>
+    <li><b>Copy que funciona:</b> especificidade total — "2 dormitórios, 62m², a 400m do metrô [estação], a partir de R$ 350 mil". Número vende apartamento.</li>
+  </ul>
+
+  <h3 id="m9-6"><span class="h3-num">9.6</span>Serviços e B2B</h3>
+  <ul class="list">
+    <li><b>Estrutura:</b> Search bottom-funnel ("software para clínica", "advogado trabalhista [cidade]") + LP de material rico (orçamento, diagnóstico, demo) + LinkedIn orgânico como reforço de autoridade;</li>
+    <li><b>Múltiplos decisores:</b> quem clica não é quem assina — a LP precisa servir também o download para "mostrar ao sócio" (PDF de proposta);</li>
+    <li><b>KPI:</b> custo por MQL (lead qualificado de marketing) e por reunião agendada; verba inicial R$ 2.500–6.000/mês;</li>
+    <li><b>Paciência:</b> ciclos de 30–90 dias — relatório de pipeline para o cliente, não só de clique.</li>
+  </ul>
+
+  <h3 id="m9-7"><span class="h3-num">9.7</span>Educação e infoprodutos</h3>
+  <ul class="list">
+    <li><b>Estrutura Meta:</b> TOFU com vídeo de valor (aula gratuita) → MOFU remarketing dos que assistiram 50%+ → BOFU com oferta + prazo real; VSL na LP;</li>
+    <li><b>Estrutura Google:</b> Search de marca + YouTube (Demand Gen) com o vídeo do infoproduto para públicos de interesse;</li>
+    <li><b>KPI:</b> CPA &lt; 30% do ticket (com upsell, o LTV perdoa) — meça a escalada em janelas de 7 dias (CPA sobe quando a frequência passa de 3,5);</li>
+    <li><b>Compliance:</b> zero promessa de ganho garantido ("fature R$ 50 mil em 30 dias" reprova e queima a página).</li>
+  </ul>
+
+  <h3 id="m9-8"><span class="h3-num">9.8</span>A tabela de bolso</h3>
+  <div class="tbl"><div class="tbl-in"><table>
+    <thead><tr><th>Segmento</th><th>Canal principal</th><th>Verba inicial/mês</th><th>KPI nº 1</th><th>Ciclo de venda</th></tr></thead>
+    <tbody>
+      <tr><td><b>Local</b></td><td>Search + WhatsApp</td><td>R$ 1,5–3 mil</td><td>Custo por conversa</td><td>Horas</td></tr>
+      <tr><td><b>Clínica</b></td><td>Search BOFU</td><td>R$ 2–4 mil</td><td>Custo por consulta</td><td>Dias</td></tr>
+      <tr><td><b>E-commerce</b></td><td>PMax + Advantage+</td><td>R$ 5 mil+</td><td>ROAS</td><td>Minutos/dias</td></tr>
+      <tr><td><b>Imobiliário</b></td><td>Search + Meta Leads</td><td>R$ 3–8 mil</td><td>Custo por lead qualificado</td><td>30–180 dias</td></tr>
+      <tr><td><b>B2B</b></td><td>Search bottom</td><td>R$ 2,5–6 mil</td><td>Custo por MQL</td><td>30–90 dias</td></tr>
+      <tr><td><b>Infoproduto</b></td><td>Meta funil completo</td><td>R$ 3 mil+</td><td>CPA × ticket</td><td>Dias</td></tr>
+    </tbody>
+  </table></div></div>
+
+  <div class="challenge">
+    <h4><span class="ch-tag">Prática</span>Desafio do Mentor — Módulo 09</h4>
+    <p class="ch-sub">Este é o "primeiro dia de trabalho" em agência: cliente novo, zero histórico.</p>
+    <ol>
+      <li>Um pet shop em bairro residencial, ticket R$ 120, margem 50%, capacidade ociosa. Diagnóstico completo: canais, estrutura, verba, KPIs e metas de 90 dias.</li>
+      <li>Escreva o RSA completo de uma imobiliária para o empreendimento "Residencial Villa Prima — 2 dorms a partir de R$ 350 mil".</li>
+      <li>Cliente de e-commerce quer saber por que não "só Instagram". Responda em 4 linhas com argumentos de canal e intenção.</li>
+      <li>Monte o plano de mídia (modelo nos Extras) para a clínica do Desafio 01 com R$ 3.000/mês.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ MÓDULO 10 ============ -->
+<section class="module" id="m10" style="--acc:#f472b6">
+  <div class="mod-head">
+    <div class="mod-ghost">10</div>
+    <span class="mod-kicker">Módulo 10 · Carreira</span>
+    <h2>Do Estudo à Contratação: Carreira em Agências</h2>
+    <div class="mod-meta">
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>75 min</span>
+      <span>9 capítulos</span><span>Portfólio, case, currículo, certificações e simulado</span>
+    </div>
+    <div class="objectives">
+      <h4>Ao final deste módulo, você será capaz de:</h4>
+      <ul>
+        <li>Montar um portfólio de gestor de tráfego em 7 dias — sem cliente ainda</li>
+        <li>Documentar cases no padrão Contexto → Ação → Resultado, com números</li>
+        <li>Escrever um currículo orientado a resultado que passa nos filtros de RH</li>
+        <li>Passar no teste técnico típico de agência (simulado com gabarito)</li>
+        <li>Saber responder as 10 perguntas mais comuns de entrevista</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 id="m10-1"><span class="h3-num">10.1</span>O mercado e os cargos</h3>
+  <div class="tbl"><div class="tbl-in"><table>
+    <thead><tr><th>Cargo típico</th><th>O que faz</th><th>Faixa BR (referência 2024/25)</th></tr></thead>
+    <tbody>
+      <tr><td><b>Estagiário / auxiliar de mídia</b></td><td>Relatórios, nomeação, operação de rotina</td><td>R$ 1,5–2,5 mil</td></tr>
+      <tr><td><b>Analista de mídia júnior</b></td><td>Opera contas com supervisão</td><td>R$ 2,5–4 mil</td></tr>
+      <tr><td><b>Gestor de tráfego pleno</b></td><td>Contas próprias, otimização, cliente direto</td><td>R$ 4–7 mil</td></tr>
+      <tr><td><b>Sênior / especialista em performance</b></td><td>Contas complexas, mentoria de juniores, estratégia</td><td>R$ 7–12 mil</td></tr>
+      <tr><td><b>Head de mídia/performance</b></td><td>Lidera time, P&amp;L dos clientes, processos</td><td>R$ 12 mil+</td></tr>
+    </tbody>
+  </table></div></div>
+  <p class="p" style="font-size:.85rem;color:var(--faint)">Faixas típicas observadas em vagas CLT no Brasil (variam por região, porte e regime — PJ costuma pagar 20–40% acima). Freelancer: fee fixo (R$ 800–3.000/mês por conta) + % da verba (5–15%).</p>
+
+  <h3 id="m10-2"><span class="h3-num">10.2</span>O que as agências realmente exigem</h3>
+  <div class="grid g2">
+    <div class="card"><div class="c-t">Hard skills</div><p>Google Ads e Meta Ads operacionais (Módulos 2–3) · rastreamento completo (Módulo 4) · leitura de dados e Excel/Sheets avançado · landing pages (Módulos 6–8: aqui você já chega na frente de 90%) · Looker Studio · inglês para ler documentação.</p></div>
+    <div class="card"><div class="c-t">Soft skills que decidem</div><p>Traduzir métrica em linguagem de negócio ("CPA caiu 20% = mais 9 vendas/mês") · proatividade com plano B · pontualidade de relatório · pedir ajuda cedo · receber feedback sem drama. Agência troca técnico medíocre com comunicação boa por gênio anti-social — para o time, não o contrário.</p></div>
+  </div>
+
+  <h3 id="m10-3"><span class="h3-num">10.3</span>Portfólio em 7 dias (sem ter cliente)</h3>
+  <ol class="list ol">
+    <li><b>Dia 1–3:</b> 3 landing pages no ar (Módulos 6–8): uma clínica, um restaurante, um e-commerce — repositórios GitHub públicos com README caprichado;</li>
+    <li><b>Dia 4:</b> 1 plano de mídia completo para uma marca fictícia com verba de R$ 5.000/mês (objetivo, estrutura, KPIs, cronograma — use o modelo nos Extras);</li>
+    <li><b>Dia 5:</b> 1 case de estudo claramente rotulado como "projeto educacional": diagnose, plano, projeção de resultado com os benchmarks do Módulo 1;</li>
+    <li><b>Dia 6:</b> LinkedIn arrumado (headline com especialidade + link do portfólio) e certificação Google Skillshop iniciada;</li>
+    <li><b>Dia 7:</b> currículo de 1 página (10.5) + mensagem-padrão de candidatura personalizada. Resultado: você já tem mais prova prática que a maioria dos candidatos juniores.</li>
+  </ol>
+
+  <h3 id="m10-4"><span class="h3-num">10.4</span>Case no padrão CAR (Contexto → Ação → Resultado)</h3>
+  <div class="code">
+    <div class="code-head"><span class="code-file">modelo-de-case.txt</span><button class="copy">Copiar</button></div>
+    <pre><code><span class="cm"># Estrutura + exemplo fictício (rotule SEMPRE dados simulados):</span>
+
+CONTEXTO: Barbearia em [bairro], 3 cadeiras, 40% de ociosidade nas
+tarde de terça a quinta. Nenhum histórico digital. Ticket: R$ 55.
+
+AÇÃO (60 dias):
+- Google Search local (raio 4 km) com recursos de chamada;
+- Meta click-to-WhatsApp para frio + remarketing;
+- LP com agenda da tarde + oferta de primeira visita (vibe coding);
+- Rastreamento: conversa iniciada + agendamento confirmado (planilha);
+- 4 testes A/B de criativo e 2 de LP.
+
+RESULTADO (dados simulados para estudo):
+- 214 conversas iniciadas, CPL R$ 4,10;
+- 96 agendamentos confirmados (custo R$ 9,15);
+- Ocupação da tarde: 40% → 71%;
+- Faturamento incremental estimado: R$ 5.280/mês sobre verba de R$ 900.
+
+LIÇÃO: a oferta certa para o horário ocioso foi mais determinante
+que qualquer otimização de lance.</code></pre>
+  </div>
+  <p>Regra: <strong>1 página, números desde a segunda linha, lição no final</strong>. Entrevistador lembra de casos,
+  nunca de adjetivos.</p>
+
+  <h3 id="m10-5"><span class="h3-num">10.5</span>Currículo orientado a resultado</h3>
+  <div class="code">
+    <div class="code-head"><span class="code-file">modelo-curriculo.txt</span><button class="copy">Copiar</button></div>
+    <pre><code>NOME SOBRENOME — Gestor de Tráfego (Google Ads · Meta Ads)
+[cidade/UF] · [linkedin] · [github com as LPs] · [whatsapp]
+
+RESUMO (3 linhas, com número)
+Gestor de tráfego com foco em resultado comercial: 3 landing pages
+no ar, plano de mídia completo e certificação Google Skillshop.
+Especializado em negócios locais e geração de leads qualificados.
+
+EXPERIÊNCIA/PROJETOS (use verbo + ferramenta + número)
+- Estruturei campanhas Search + WhatsApp para barbearia local,
+  gerando 96 agendamentos em 60 dias (CPL R$ 4,10 — projeto estudo);
+- Desenvolvi 3 landing pages de alta conversão com IA (z.ai/GLM-5.3),
+  deploy automatizado via GitHub Pages, carregamento &lt; 3s mobile;
+- Montei dashboard Looker Studio integrando GA4 + Google Ads para
+  leitura executiva de CPL/ROAS semanal.
+
+CERTIFICAÇÕES E FERRAMENTAS
+Google Skillshop [quais completou] · GA4 · Looker Studio · Excel ·
+Meta Business Suite · UTM/ValueTrack · Lookalike/CAPI
+
+FORMAÇÃO
+[Cursos e a mentoria — a mentoria é formação legítima, liste]</code></pre>
+  </div>
+  <p>Tire: objetivo de carreira, foto (opcional no BR), "disponível para começar ontem", habilidades sem prova.
+  Coloque: números, links vivos (GitHub das LPs!) e a mentoria como formação — ela é.</p>
+
+  <h3 id="m10-6"><span class="h3-num">10.6</span>Certificações que valem o tempo</h3>
+  <ul class="list">
+    <li><b>Google Skillshop (grátis):</b> Google Ads Search, Display, Video, Measurement e AI-Powered Performance — comece por Search e Measurement (4–6h cada);</li>
+    <li><b>Meta Blueprint:</b> cursos gratuitos; os exames de certificação são pagos (na faixa de US$ 99–150) — deixe para quando a agência/empresa bancar;</li>
+    <li><b>GA4:</b> certificação de Google Analytics no Skillshop — pedido recorrente em vaga de performance.</li>
+  </ul>
+
+  <h3 id="m10-7"><span class="h3-num">10.7</span>Simulado: o teste técnico típico</h3>
+  <p><i>"Um cliente pizzaria tem R$ 3.000/mês, entrega no raio de 5 km, ticket R$ 65 e quer crescer as terças e
+  quintas. Monte o plano."</i> Gabarito comentado:</p>
+  <ol class="list ol">
+    <li><b>Diagnóstico:</b> margem de pizza ~60% → R$ 39 por pedido; CPL aceitável até ~R$ 15 se 1 em 3 conversas vira pedido (R$ 45 por pedido → margem sustenta com recompra);</li>
+    <li><b>Verba:</b> R$ 1.800 Google (60%) + R$ 1.200 Meta (40%);</li>
+    <li><b>Google:</b> 1 campanha Search raio 5 km ("pizza delivery [bairro]", "pizza terça"), recursos de chamada + local, negativas; 1 campanha com promoção de terça/quinta via recurso de promoção e programação de anúncio nesses dias;</li>
+    <li><b>Meta:</b> click-to-WhatsApp com foto do produto + remarketing de engajou/visitou com oferta de combo;</li>
+    <li><b>LP:</b> oferta da tarde, menu enxuto, botão WhatsApp, PageSpeed &lt; 3s;</li>
+    <li><b>Rastreamento:</b> conversa iniciada + pedido informado (planilha), GA4 + UTMs;</li>
+    <li><b>Meta de 90 dias:</b> 150+ pedidos incrementais com custo por pedido ≤ R$ 20, ROAS ≥ 4;</li>
+    <li><b>Plano B:</b> se CPA estourar 2 semanas: revisar negativas, criativo, e testar formulário de pedido rápido.</li>
+  </ol>
+
+  <h3 id="m10-8"><span class="h3-num">10.8</span>As 10 perguntas de entrevista (respostas-guia em 1 linha)</h3>
+  <div class="tbl"><div class="tbl-in"><table>
+    <thead><tr><th>Pergunta</th><th>Fio condutor da resposta</th></tr></thead>
+    <tbody>
+      <tr><td>CBO ou ABO — quando?</td><td>CBO para escala/Advantage+; ABO para controle e testes de público</td></tr>
+      <tr><td>Quando usar correspondência ampla?</td><td>Com lances inteligentes, histórico de conversão e disciplina de termos/negativas</td></tr>
+      <tr><td>O que é Quality Score?</td><td>Diagnóstico 1–10 de CTR esperado + relevância + experiência da LP; afeta posição e CPC real</td></tr>
+      <tr><td>CPA subiu 40% numa semana. Primeiro passo?</td><td>Verificar rastreamento; depois sazonalidade/fadiga; só então estrutura</td></tr>
+      <tr><td>Como escala uma campanha lucrativa?</td><td>Vertical +20% a cada 2 dias; horizontal com públicos/criativos novos</td></tr>
+      <tr><td>Quando evitar PMax?</td><td>Sem histórico de conversões, controle fino de termo essencial ou feed fraco</td></tr>
+      <tr><td>Pixel x CAPI?</td><td>Navegador x servidor; juntos com dedup por event_id; CAPI recupera perda de iOS/bloqueio</td></tr>
+      <tr><td>Como definir verba de teste?</td><td>Pelo CPA máximo × conversões mínimas para aprender (10–30) × janela</td></tr>
+      <tr><td>Quais KPIs reporta ao cliente?</td><td>Os ligados ao dinheiro: CPL/CPA/ROAS + tendência — não vaidade (curtidas)</td></tr>
+      <tr><td>30 dias sem converter. O que faz?</td><td>Revisar oferta antes do anúncio: tráfego acelera o que já funciona; matar ou pivotar</td></tr>
+    </tbody>
+  </table></div></div>
+
+  <h3 id="m10-9"><span class="h3-num">10.9</span>Plano de 30 dias até a primeira contratação</h3>
+  <div class="kpis">
+    <div class="kpi"><div class="kpi-n">S1</div><div class="kpi-l">Portfólio (3 LPs no ar) + Skillshop Search</div></div>
+    <div class="kpi"><div class="kpi-n">S2</div><div class="kpi-l">Plano de mídia + case + currículo + LinkedIn</div></div>
+    <div class="kpi"><div class="kpi-n">S3</div><div class="kpi-l">10 candidaturas/dia + 3 conversas de networking em comunidades de marketing</div></div>
+    <div class="kpi"><div class="kpi-n">S4</div><div class="kpi-l">Simulados de entrevista + follow-up das vagas + 1 cliente-familiar para gerar o primeiro case real</div></div>
+  </div>
+
+  <div class="challenge">
+    <h4><span class="ch-tag">Prática</span>Desafio do Mentor — Módulo 10 (final)</h4>
+    <p class="ch-sub">O último desafio da apostila é o primeiro dia da sua carreira.</p>
+    <ol>
+      <li>Execute o plano de 7 dias de portfólio e publique os links no seu README principal do GitHub.</li>
+      <li>Grave um vídeo de 3 minutos apresentando o case da barbearia como se fosse para um cliente. Autoavaliação brutal: cortaria?</li>
+      <li>Faça o teste técnico simulado (10.7) escrito, cronometrado em 40 minutos.</li>
+      <li>Envie o currículo para 10 vagas reais esta semana — e volte para reler o módulo 1 depois das primeiras entrevistas. O mercado é o melhor Mentor de todos.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ EXTRAS ============ -->
+<section class="module" id="extras" style="--acc:#94a3b8">
+  <div class="mod-head">
+    <div class="mod-ghost">EX</div>
+    <span class="mod-kicker">Extras · Consulta rápida</span>
+    <h2>Glossário, Rotinas do Gestor e Modelos Prontos</h2>
+    <div class="mod-meta">
+      <span>4 blocos</span><span>Volte aqui sempre que precisar</span>
+    </div>
+    <div class="objectives">
+      <h4>O que você encontra aqui:</h4>
+      <ul>
+        <li>Glossário com busca instantânea — 45 termos que aparecem em reunião de agência</li>
+        <li>As rotinas diária, semanal e mensal do gestor profissional</li>
+        <li>Modelos prontos: convenção de nomes, plano de mídia, log de testes e brief de criativo</li>
+        <li>Links das documentações oficiais para manter-se atualizado</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 id="ex-1"><span class="h3-num">EX.1</span>Glossário do tráfego pago</h3>
+  <div class="gsearch">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+    <input type="text" id="glossFilter" placeholder="Buscar termo… (ex.: ROAS, CAPI, funil)" aria-label="Buscar no glossário">
+  </div>
+  <dl class="gloss">
+    <div class="gterm"><dt>Ad Rank</dt><dd>Pontuação que define a posição do anúncio no leilão: lance + qualidade + contexto + recursos.</dd></div>
+    <div class="gterm"><dt>ABO</dt><dd>Ad Set Budget Optimization — orçamento definido por conjunto de anúncios (controle por público).</dd></div>
+    <div class="gterm"><dt>Advantage+</dt><dd>Suite de automações da Meta: público, posicionamentos e campanhas de compras automatizadas.</dd></div>
+    <div class="gterm"><dt>AIDA</dt><dd>Fórmula de copy: Atenção, Interesse, Desejo, Ação.</dd></div>
+    <div class="gterm"><dt>Ampla (correspondência)</dt><dd>O anúncio entra em buscas relacionadas ao tema; na Meta, o público "amplo" é o cold aberto.</dd></div>
+    <div class="gterm"><dt>Atribuição</dt><dd>Modelo que decide qual anúncio leva o crédito da conversão (último clique, baseada em dados, 7d clique + 1d visualização).</dd></div>
+    <div class="gterm"><dt>A/B (teste)</dt><dd>Comparação controlada de duas versões com uma única variável e significância estatística.</dd></div>
+    <div class="gterm"><dt>BOFU</dt><dd>Fundo do funil — quem está pronto para comprar. Mensagem: oferta e CTA.</dd></div>
+    <div class="gterm"><dt>Break-even</dt><dd>Ponto de equilíbrio. ROAS de break-even = 1 ÷ margem de contribuição.</dd></div>
+    <div class="gterm"><dt>CAPI</dt><dd>API de Conversões da Meta: eventos enviados do servidor, com deduplicação via event_id.</dd></div>
+    <div class="gterm"><dt>CBO</dt><dd>Campaign Budget Optimization (Advantage campaign budget) — orçamento na campanha, realocado pelo algoritmo.</dd></div>
+    <div class="gterm"><dt>CPC</dt><dd>Custo por clique.</dd></div>
+    <div class="gterm"><dt>CPM</dt><dd>Custo por mil impressões — termômetro do leilão e da qualidade do público.</dd></div>
+    <div class="gterm"><dt>CPA / CPL</dt><dd>Custo por aquisição (venda) / custo por lead.</dd></div>
+    <div class="gterm"><dt>CTR</dt><dd>Click-through rate: cliques ÷ impressões. Saúde do criativo/título.</dd></div>
+    <div class="gterm"><dt>CVR (taxa de conversão)</dt><dd>Conversões ÷ cliques (ou visitas). A métrica da landing page.</dd></div>
+    <div class="gterm"><dt>Demand Gen</dt><dd>Campanha Google em YouTube, Discover e Gmail para gerar demanda (sucessora das Discovery).</dd></div>
+    <div class="gterm"><dt>EMQ</dt><dd>Event Match Quality — nota 0–10 da qualidade dos dados enviados à CAPI (alvo: 6+).</dd></div>
+    <div class="gterm"><dt>Exata (correspondência)</dt><dd>[palavra] — o anúncio entra em buscas de significado praticamente idêntico.</dd></div>
+    <div class="gterm"><dt>Fadiga de criativo</dt><dd>Queda de desempenho por superexposição; sinal: frequência alta com CTR em queda.</dd></div>
+    <div class="gterm"><dt>Feed</dt><dd>Arquivo de produtos (Merchant Center) com título, preço, imagem e estoque — base de Shopping/PMax.</dd></div>
+    <div class="gterm"><dt>Frequência</dt><dd>Média de vezes que a mesma pessoa viu o anúncio. Acima de ~4, hora de variar.</dd></div>
+    <div class="gterm"><dt>Funil</dt><dd>Percurso conscientização → consideração → decisão (TOFU/MOFU/BOFU).</dd></div>
+    <div class="gterm"><dt>GA4</dt><dd>Google Analytics 4 — análise de comportamento + key events, vinculado ao Google Ads.</dd></div>
+    <div class="gterm"><dt>GCLID</dt><dd>Identificador do clique do Google — liga o clique à conversão offline (CRM).</dd></div>
+    <div class="gterm"><dt>Hook</dt><dd>Os primeiros segundos/vocabulares que prendem a atenção do criativo.</dd></div>
+    <div class="gterm"><dt>Impressão</dt><dd>Uma exibição do anúncio.</dd></div>
+    <div class="gterm"><dt>Índice de Qualidade</dt><dd>Nota 1–10 do Google: CTR esperado + relevância do anúncio + experiência da LP.</dd></div>
+    <div class="gterm"><dt>Lead</dt><dd>Contato comercial capturado (formulário, WhatsApp, ligação).</dd></div>
+    <div class="gterm"><dt>Lookalike (semelhante)</dt><dd>Público da Meta parecido com a sua base — comece por 1% a partir de compradores.</dd></div>
+    <div class="gterm"><dt>LTV</dt><dd>Lifetime value: receita total que um cliente gera ao longo da relação. Permite CPA maior.</dd></div>
+    <div class="gterm"><dt>MDE</dt><dd>Diferença mínima detectável — o menor ganho que um teste A/B consegue detectar com a amostra disponível.</dd></div>
+    <div class="gterm"><dt>MQL</dt><dd>Lead qualificado para marketing — passou pelos critérios de fit (perfil + intenção).</dd></div>
+    <div class="gterm"><dt>PAS</dt><dd>Fórmula de copy: Problema, Agravação, Solução.</dd></div>
+    <div class="gterm"><dt>Pixel (Meta)</dt><dd>Código no site que captura eventos do navegador para otimização e remarketing.</dd></div>
+    <div class="gterm"><dt>PMax</dt><dd>Performance Max: campanha do Google em todos os inventários com grupos de recursos.</dd></div>
+    <div class="gterm"><dt>ROAS</dt><dd>Return on ad spend: receita ÷ investimento em anúncios.</dd></div>
+    <div class="gterm"><dt>RSA</dt><dd>Responsive Search Ad: 15 títulos + 4 descrições combinados pelo Google.</dd></div>
+    <div class="gterm"><dt>Remarketing</dt><dd>Anunciar novamente para quem já interagiu (site, app, WhatsApp, engajamento).</dd></div>
+    <div class="gterm"><dt>tCPA</dt><dd>Estratégia de lance por CPA desejado.</dd></div>
+    <div class="gterm"><dt>TOFU / MOFU</dt><dd>Topo e meio do funil — conscientização e consideração.</dd></div>
+    <div class="gterm"><dt>tROAS</dt><dd>Estratégia de lance por ROAS desejado.</dd></div>
+    <div class="gterm"><dt>UTM</dt><dd>Parâmetros na URL (source, medium, campaign…) que identificam a origem do tráfego.</dd></div>
+    <div class="gterm"><dt>ValueTrack</dt><dd>Placeholder dinâmico do Google ({campaignid}, {keyword}…) usado dentro das UTMs.</dd></div>
+    <div class="gterm"><dt>Vibe coding</dt><dd>Programar conversando com IA em linguagem natural — o fluxo do Módulo 07.</dd></div>
+    <div class="gterm"><dt>VSL</dt><dd>Video Sales Letter: página de vendas em vídeo, comum em infoprodutos.</dd></div>
+  </dl>
+
+  <h3 id="ex-2"><span class="h3-num">EX.2</span>As rotinas do gestor profissional</h3>
+  <div class="grid g3">
+    <div class="card">
+      <div class="c-t">Diária (10 min/conta)</div>
+      <p>
+      - Gasto e ritmo de conversão dentro do esperado?<br>
+      - Anúncios reprovados ou conta com alerta?<br>
+      - Página no ar e rastreamento vivo (tempo real)?<br>
+      - Formulários/WhatsApp chegando (caixa de entrada)?<br>
+      - Anotar qualquer anomalia no diário de bordo.
+      </p>
+    </div>
+    <div class="card">
+      <div class="c-t">Semanal (1h/conta)</div>
+      <p>
+      - Relatório de termos: negativar + promover (Google);<br>
+      - CPA/ROAS por campanha vs. meta (2 semanas rule);<br>
+      - Fadiga: frequência, CTR, CPM;<br>
+      - Backlog de testes: rodando o do topo da lista?<br>
+      - Relatório de 1 página ao cliente (Looker).
+      </p>
+    </div>
+    <div class="card">
+      <div class="c-t">Mensal (2–3h/conta)</div>
+      <p>
+      - Revisão de orçamento e projeção do mês;<br>
+      - Exclusões: palavras com gasto zero-conv; públicos saturados;<br>
+      - Ativos: criativos novos, novas páginas, feed;<br>
+      - Reunião de resultado com o cliente (números + plano);<br>
+      - Auditoria de token/acessos (higiene do Módulo 08).
+      </p>
+    </div>
+  </div>
+
+  <h3 id="ex-3"><span class="h3-num">EX.3</span>Modelos prontos para copiar</h3>
+  <h4>Plano de mídia (resumo de 1 página para o cliente aprovar)</h4>
+  <div class="tbl"><div class="tbl-in"><table>
+    <thead><tr><th>Campanha</th><th>Canal / objetivo</th><th>Público / tema</th><th>Verba/mês</th><th>KPI</th><th>Meta 90 dias</th></tr></thead>
+    <tbody>
+      <tr><td>BUSCA-LOCAL</td><td>Google · Search</td><td>raio 5 km + negativas</td><td>R$ 1.200</td><td>Custo/ligação</td><td>≤ R$ 12</td></tr>
+      <tr><td>WHATS-FRIO</td><td>Meta · Tráfego</td><td>geo + amplo</td><td>R$ 900</td><td>Custo/conversa</td><td>≤ R$ 6</td></tr>
+      <tr><td>REMKT-CALOR</td><td>Meta · Vendas</td><td>visitou 30d</td><td>R$ 600</td><td>Custo/pedido</td><td>≤ R$ 20</td></tr>
+      <tr><td>MARCA</td><td>Google · Search marca</td><td>nome da empresa</td><td>R$ 300</td><td>Posição 1</td><td>100% SOV</td></tr>
+    </tbody>
+  </table></div></div>
+  <h4>Log de testes A/B (preencha a cada veredito)</h4>
+  <div class="tbl"><div class="tbl-in"><table>
+    <thead><tr><th>ID</th><th>Data início/fim</th><th>Hipótese (Se/Então/Porque)</th><th>Variável</th><th>Resultado</th><th>p</th><th>Decisão</th></tr></thead>
+    <tbody>
+      <tr><td>T-001</td><td>03/11 → 17/11</td><td>Se prova social no 1º scroll, então CVR +20% porque reduz ansiedade</td><td>Bloco da LP</td><td>2,4% → 3,1%</td><td>0,18</td><td>Continuar teste</td></tr>
+      <tr><td>T-002</td><td>…</td><td>…</td><td>…</td><td>…</td><td>…</td><td>…</td></tr>
+    </tbody>
+  </table></div></div>
+  <h4>Brief de criativo (o que entregar ao designer — ou à IA)</h4>
+  <ul class="list">
+    <li>Objetivo da peça + público + etapa do funil;</li>
+    <li>Formatos e tamanhos exatos (Módulo 3.6);</li>
+    <li>A promessa única + a prova que a sustenta;</li>
+    <li>CTA e destino (LP/WhatsApp) + UTMs;</li>
+    <li>Referências visuais e o que NÃO fazer (compliance);</li>
+    <li>Prazo e critério de aprovação (CTR ≥ X%?).</li>
+  </ul>
+
+  <h3 id="ex-4"><span class="h3-num">EX.4</span>Documentação oficial (atualize-se sempre aqui)</h3>
+  <div class="links">
+    <a class="link-card" href="https://support.google.com/google-ads" target="_blank" rel="noopener"><div class="lc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg></div><div><b>Central de Ajuda do Google Ads</b><span>support.google.com/google-ads</span></div></a>
+    <a class="link-card" href="https://skillshop.withgoogle.com" target="_blank" rel="noopener"><div class="lc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5zM6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></div><div><b>Google Skillshop</b><span>skillshop.withgoogle.com — certificações gratuitas</span></div></a>
+    <a class="link-card" href="https://www.facebook.com/business/help" target="_blank" rel="noopener"><div class="lc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg></div><div><b>Central de Ajuda de Negócios da Meta</b><span>facebook.com/business/help</span></div></a>
+    <a class="link-card" href="https://developers.facebook.com/docs/meta-pixel" target="_blank" rel="noopener"><div class="lc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg></div><div><b>Documentação do Pixel da Meta</b><span>developers.facebook.com/docs/meta-pixel</span></div></a>
+    <a class="link-card" href="https://developers.facebook.com/docs/marketing-api/conversions-api" target="_blank" rel="noopener"><div class="lc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg></div><div><b>API de Conversões (CAPI)</b><span>developers.facebook.com/docs/marketing-api/conversions-api</span></div></a>
+    <a class="link-card" href="https://support.google.com/analytics" target="_blank" rel="noopener"><div class="lc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M7 14l4-4 3 3 5-6"/></svg></div><div><b>Google Analytics (GA4)</b><span>support.google.com/analytics</span></div></a>
+    <a class="link-card" href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens" target="_blank" rel="noopener"><div class="lc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><div><b>Tokens de acesso GitHub (fine-grained)</b><span>docs.github.com — managing your personal access tokens</span></div></a>
+    <a class="link-card" href="https://docs.github.com/en/rest/pages" target="_blank" rel="noopener"><div class="lc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V2H6.5A2.5 2.5 0 0 0 4 4.5v15z"/></svg></div><div><b>GitHub Pages + API</b><span>docs.github.com/en/rest/pages</span></div></a>
+    <a class="link-card" href="https://z.ai" target="_blank" rel="noopener"><div class="lc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 2 5 14h5l-1.5 8L17 10h-5l1.5-8z"/></svg></div><div><b>Z.ai — IA GLM-5.3</b><span>z.ai — vibe coding das suas landing pages</span></div></a>
+    <a class="link-card" href="https://support.google.com/tagmanager/answer/13695607" target="_blank" rel="noopener"><div class="lc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></div><div><b>Consent Mode v2 (Google)</b><span>support.google.com/tagmanager — consentimento e LGPD</span></div></a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ RODAPÉ ============ -->
+<footer class="foot">
+  <div class="foot-brand">
+    <div class="brand-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M13.5 2 5 14h5l-1.5 8L17 10h-5l1.5-8z" fill="#fff"/></svg></div>
+    Apostila de Tráfego Pago &amp; Landing Pages
+  </div>
+  <p>Material educacional de mentoria — edição novembro/<span id="yr">2025</span>. Distribua livremente aos seus mentorados.</p>
+  <p>Plataformas, recursos, limites de caracteres e políticas citados refletem as documentações oficiais de novembro/2025 e podem mudar a qualquer momento — confira sempre os links oficiais no bloco EX.4 antes de executar.</p>
+  <p>Construída com vibe coding (z.ai · GLM-5.3) e publicada no GitHub Pages — o mesmo fluxo ensinado no Módulo 08.</p>
+</footer>
+
+  </div>
+</main>
+
+<button class="to-top" id="toTop" aria-label="Voltar ao topo">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+<script src="app.js"></script>
+</body>
+</html>
